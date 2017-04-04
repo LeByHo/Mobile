@@ -10,8 +10,8 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class Main2Activity extends AppCompatActivity {
-    Button btn_up;
-    Button btn_down;
+    Button btn_up,btn_down;
+    Button Fbutton;
     TextView text;
     int count = 0;
 
@@ -19,7 +19,14 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        Fbutton = (Button)findViewById(R.id.finish);
         setup();
+        Fbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void setup() {
@@ -41,9 +48,14 @@ public class Main2Activity extends AppCompatActivity {
                     break;
                 case R.id.buttonm:
                     count--;
+                    if(count<0){
+                        Toast.makeText(getApplicationContext(),"음수ㄴㄴ",Toast.LENGTH_SHORT).show();
+                       count=0;
+                        break;
+                    }
                     text.setText("" + count);
                     break;
             }
         }
     };
-};
+}
