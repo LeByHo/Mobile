@@ -4,9 +4,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-//import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 /**
- * Created by LEE on 2017-05-15.
+ * Created by GE62 on 2017-05-15.
  */
 
 public class MainFragment extends Fragment {
@@ -51,5 +49,4 @@ public class MainFragment extends Fragment {
             bar.incrementProgressBy(5);
         }
     }
-
 }

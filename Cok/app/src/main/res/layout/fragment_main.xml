@@ -32,13 +32,13 @@
         <TableRow>
             <TextView
                 android:layout_gravity="center"
-                android:layout_weight="wrap_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="D-DAY :"
                 android:textSize="20dp"/>
             <TextView
                 android:layout_height="match_parent"
-                android:layout_weight="match_parent"
+                android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:text="1010일"
                 android:textSize="20dp"
@@ -46,7 +46,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_weight="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:textSize="20dp"
                 android:text="미팅 횟수"
