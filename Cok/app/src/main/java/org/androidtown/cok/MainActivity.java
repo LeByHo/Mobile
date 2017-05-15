@@ -1,16 +1,12 @@
 package org.androidtown.cok;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
-import static android.R.attr.data;
 
 
 public class MainActivity extends AppCompatActivity {
