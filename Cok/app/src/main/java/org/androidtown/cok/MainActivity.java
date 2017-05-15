@@ -44,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         String outName = data.getStringExtra("title");
         int num = data.getIntExtra("number",1);
         Toast.makeText(getApplicationContext(), outName + " "+ num, Toast.LENGTH_LONG).show();
+        android.app.FragmentManager fm=getFragmentManager();
+        android.app.FragmentTransaction tr=fm.beginTransaction();
+        MainFragment cf=new MainFragment();
+        tr.add(R.id.frame, cf ,"counter");
+        tr.commit();
     }
 
     @Override

@@ -21,7 +21,6 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Fbutton = (Button)findViewById(R.id.finish);
         setup();
         Cbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,16 +32,7 @@ public class Main2Activity extends AppCompatActivity {
         Fbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                android.app.FragmentManager fm=getFragmentManager();
-                Fragment fragment=fm.findFragmentById(R.id.frame);
-                switch (v.getId()){
-                    case R.id.m_button:
-                        android.app.FragmentTransaction tr=fm.beginTransaction();
-                        MainFragment cf=new MainFragment();
-                        tr.add(R.id.frame, cf ,"counter");
-                        tr.commit();
-                        break;
-                }
+
                 Intent intent = getIntent();
                 Bundle bundle = intent.getExtras();
                 bundle.putString("title",title.getText().toString());

@@ -8,16 +8,16 @@
     tools:context="org.androidtown.cok.MainActivity">
 
     <ScrollView
-            android:id="@+id/scroll"
-           android:layout_width="match_parent"
-            android:layout_height="match_parent">
-           <LinearLayout
-                android:id="@+id/frame"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-                android:orientation="vertical">
-            </LinearLayout>
-       </ScrollView>
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
 
 <ImageButton
         android:id="@+id/m_button"
