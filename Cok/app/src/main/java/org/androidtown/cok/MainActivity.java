@@ -42,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         String outName = data.getStringExtra("title");
-        int num = data.getIntExtra("number",1);
+        String num = data.getStringExtra("number");
         Toast.makeText(getApplicationContext(), outName + " "+ num, Toast.LENGTH_LONG).show();
         android.app.FragmentManager fm=getFragmentManager();
         android.app.FragmentTransaction tr=fm.beginTransaction();
         MainFragment cf=new MainFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("Project",outName);
+        bundle.putString("mCount",num);
+        cf.setArguments(bundle);
         tr.add(R.id.frame, cf ,"counter");
         tr.commit();
     }

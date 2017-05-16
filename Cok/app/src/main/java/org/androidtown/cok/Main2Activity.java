@@ -32,11 +32,10 @@ public class Main2Activity extends AppCompatActivity {
         Fbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = getIntent();
                 Bundle bundle = intent.getExtras();
                 bundle.putString("title",title.getText().toString());
-                bundle.putInt("number",count);
+                bundle.putString("number",count+"");
                 intent.putExtras(bundle);
                 setResult(RESULT_OK,intent);
                 finish();
