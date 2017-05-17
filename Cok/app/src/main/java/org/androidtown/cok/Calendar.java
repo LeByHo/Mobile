@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+
 /**
  * Created by GE62 on 2017-05-10.
  */
@@ -21,6 +23,7 @@ public class Calendar extends AppCompatActivity{
         setContentView(R.layout.calendar);
         calendarView = (CalendarView)findViewById(R.id.calendar);
         button = (Button)findViewById(R.id.button3);
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {

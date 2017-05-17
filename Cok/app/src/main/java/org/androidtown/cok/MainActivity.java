@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), outName + " "+ num, Toast.LENGTH_LONG).show();
         android.app.FragmentManager fm=getFragmentManager();
         android.app.FragmentTransaction tr=fm.beginTransaction();
-        MainFragment cf=new MainFragment();
+        MainFragment cf = new MainFragment(MainActivity.this);
         Bundle bundle = new Bundle();
         bundle.putString("Project",outName);
         bundle.putString("mCount",num);

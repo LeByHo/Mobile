@@ -1,11 +1,14 @@
 package org.androidtown.cok;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +30,7 @@ public class MainFragment extends Fragment {
     ProgressHandler handler;
     Button btn;
     boolean isRunning =false;
+    Context mainContext;
 
     @Nullable
     @Override
@@ -37,18 +41,33 @@ public class MainFragment extends Fragment {
         mCount =(TextView)rootView.findViewById(R.id.text2);
         mcount = (TextView)rootView.findViewById(R.id.text3);
         btn =(Button)rootView.findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               mcount.setText("gg".toString());
-            }
-        });
         handler = new ProgressHandler();
         Bundle extra = getArguments();
         pName.setText(extra.getString("Project").toString());
         mCount.setText(extra.getString("mCount").toString());
+        btn.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mainContext,Main3Activity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("NAME",pName.getText().toString());
+                bundle.putString("NUM",mCount.getText().toString());
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
         return rootView;
     }
+
+    public MainFragment(Context _context){
+        mainContext = _context;
+    }
+
+
+
 
 
     public void onStart() {
@@ -67,6 +86,10 @@ public class MainFragment extends Fragment {
         isRunning = true;
         thread1.start();
     }
+
+
+
+
     public class ProgressHandler extends Handler {
         public void handleMessage(Message msg){
             bar.incrementProgressBy(5);

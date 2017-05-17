@@ -21,6 +21,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         setup();
         Cbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,7 @@ public class Main2Activity extends AppCompatActivity {
         Fbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = getIntent();
                 Bundle bundle = intent.getExtras();
                 bundle.putString("title",title.getText().toString());
