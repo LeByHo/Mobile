@@ -53,7 +53,21 @@
         android:layout_alignBottom="@+id/textView2"
         android:layout_toRightOf="@+id/buttonm"
         android:layout_toEndOf="@+id/buttonm" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기  간         : "
+        android:layout_alignTop="@+id/button"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+    <TextView
+        android:id="@+id/c_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
     <Button
         android:id="@+id/buttonm"
         android:layout_width="wrap_content"
@@ -93,4 +107,5 @@
         android:layout_alignStart="@+id/buttonm"
         android:layout_alignRight="@+id/buttonp"
         android:layout_alignEnd="@+id/buttonp" />
+
 </RelativeLayout>

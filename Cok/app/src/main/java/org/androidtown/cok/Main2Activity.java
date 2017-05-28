@@ -13,8 +13,11 @@ import android.widget.Toast;
 public class Main2Activity extends AppCompatActivity {
     Button btn_up,btn_down;
     Button Fbutton,Cbutton;
+    String s;
+    String f;
     TextView text;
     EditText title;
+    TextView text2;
     int count = 0;
 
     @Override
@@ -26,8 +29,10 @@ public class Main2Activity extends AppCompatActivity {
         Cbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cintent = new Intent(getApplicationContext(),Calendar.class);
-                startActivity(cintent);
+                Intent clintent = new Intent(Main2Activity.this, Calendar.class);
+                Bundle bundle = new Bundle();
+                clintent.putExtras(bundle);
+                startActivityForResult(clintent,2);
             }
         });
         Fbutton.setOnClickListener(new View.OnClickListener() {
@@ -36,14 +41,50 @@ public class Main2Activity extends AppCompatActivity {
 
                 Intent intent = getIntent();
                 Bundle bundle = intent.getExtras();
-                bundle.putString("title",title.getText().toString());
-                bundle.putString("number",count+"");
+                bundle.putString("title", title.getText().toString());
+                bundle.putString("number", count + "");
+                bundle.putString("start",s);
+                bundle.putString("finish",f);
                 intent.putExtras(bundle);
-                setResult(RESULT_OK,intent);
+                setResult(RESULT_OK, intent);
                 finish();
             }
         });
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Bundle bundle = data.getExtras();
+        Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
+        text2.setVisibility(View.VISIBLE);
+        text2.setText("시작일 :"+bundle.getInt("YEAR")+" 년 "+bundle.getInt("MONTH")+" 월 "+bundle.getInt("DAY")+" 일"+"\n"+
+                "종료일 :"+bundle.getInt("Year")+" 년 "+bundle.getInt("Month")+" 월 "+bundle.getInt("Day")+" 일");
+        if(bundle.getInt("MONTH")<10)
+         s=bundle.getInt("YEAR")+"-"+"0"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
+        else{
+            s=bundle.getInt("YEAR")+"-"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
+        }
+        if(bundle.getInt("Month")<10){
+            f=bundle.getInt("Year")+"-"+"0"+bundle.getInt("Month")+"-"+bundle.getInt("Day");
+        }
+        else{
+            f=bundle.getInt("Year")+"-"+bundle.getInt("Month")+"-"+bundle.getInt("Day");
+        }
+        Cbutton.setVisibility(View.INVISIBLE);
+    }
+/*
+
+    private void modify(){
+        Intent intent= getIntent();
+        Bundle bundle = intent.getExtras();
+        Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
+        text2.setVisibility(View.VISIBLE);
+        text2.setText("시작일 :"+bundle.getInt("YEAR")+" 년 "+bundle.getInt("MONTH")+" 월 "+bundle.getInt("DAY")+" 일"+"\n"+
+                "종료일 :"+bundle.getInt("Year")+" 년 "+bundle.getInt("Month")+" 월 "+bundle.getInt("Day")+" 일");
+        Cbutton.setVisibility(View.INVISIBLE);
+    }
+    }
+*/
 
 
     private void setup() {
@@ -55,6 +96,7 @@ public class Main2Activity extends AppCompatActivity {
         Cbutton = (Button)findViewById(R.id.button);
         btn_up.setOnClickListener(listener);
         btn_down.setOnClickListener(listener);
+        text2 = (TextView)findViewById(R.id.c_text);
     }
 
     View.OnClickListener listener = new View.OnClickListener() {

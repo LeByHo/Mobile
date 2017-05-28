@@ -45,6 +45,7 @@ public class MainFragment extends Fragment {
         Bundle extra = getArguments();
         pName.setText(extra.getString("Project").toString());
         mCount.setText(extra.getString("mCount").toString());
+        mcount.setText(extra.getString("mCount").toString());
         btn.setOnClickListener(new View.OnClickListener() {
 
 
