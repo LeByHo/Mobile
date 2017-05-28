@@ -29,8 +29,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_alignBottom="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
+        android:layout_toRightOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -46,28 +45,15 @@
         android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
-        android:text="0"
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/buttonm"
         android:layout_toRightOf="@+id/buttonm"
-        android:layout_toEndOf="@+id/buttonm" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="기  간         : "
-        android:layout_alignTop="@+id/button"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
-    <TextView
-        android:id="@+id/c_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:text="0"
+        android:textSize="24sp" />
+
     <Button
         android:id="@+id/buttonm"
         android:layout_width="wrap_content"
@@ -83,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/sd_dutton"
         android:layout_alignRight="@+id/editText3"
         android:layout_alignEnd="@+id/editText3" />
 
@@ -97,15 +83,26 @@
         android:text="생성" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/fd_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="29dp"
         android:text="Button"
-        android:layout_below="@+id/buttonm"
-        android:layout_alignLeft="@+id/buttonm"
-        android:layout_alignStart="@+id/buttonm"
+        android:layout_below="@+id/sd_dutton"
+        android:layout_alignLeft="@+id/sd_dutton"
+        android:layout_alignStart="@+id/sd_dutton"
         android:layout_alignRight="@+id/buttonp"
         android:layout_alignEnd="@+id/buttonp" />
 
+    <Button
+        android:id="@+id/sd_dutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/buttonp"
+        android:layout_alignRight="@+id/buttonp"
+        android:layout_below="@+id/buttonm"
+        android:layout_marginTop="30dp"
+        android:text="Button"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 </RelativeLayout>

@@ -1,6 +1,5 @@
 package org.androidtown.cok;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,23 +9,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Main2Activity extends AppCompatActivity {
+    String s,f;
     Button btn_up,btn_down;
-    Button Fbutton,Cbutton;
-    String s;
-    String f;
+    Button Fbutton, sd_button, fd_button;
     TextView text;
     EditText title;
-    TextView text2;
     int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
         setup();
-        Cbutton.setOnClickListener(new View.OnClickListener() {
+        setDate();
+        sd_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent clintent = new Intent(Main2Activity.this, Calendar.class);
@@ -38,7 +38,6 @@ public class Main2Activity extends AppCompatActivity {
         Fbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = getIntent();
                 Bundle bundle = intent.getExtras();
                 bundle.putString("title", title.getText().toString());
@@ -46,7 +45,7 @@ public class Main2Activity extends AppCompatActivity {
                 bundle.putString("start",s);
                 bundle.putString("finish",f);
                 intent.putExtras(bundle);
-                setResult(RESULT_OK, intent);
+                setResult(RESULT_OK,intent);
                 finish();
             }
         });
@@ -55,12 +54,11 @@ public class Main2Activity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Bundle bundle = data.getExtras();
-        Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
-        text2.setVisibility(View.VISIBLE);
-        text2.setText("시작일 :"+bundle.getInt("YEAR")+" 년 "+bundle.getInt("MONTH")+" 월 "+bundle.getInt("DAY")+" 일"+"\n"+
-                "종료일 :"+bundle.getInt("Year")+" 년 "+bundle.getInt("Month")+" 월 "+bundle.getInt("Day")+" 일");
+        //Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
+        sd_button.setText("시작일 :"+bundle.getInt("YEAR")+" 년 "+bundle.getInt("MONTH")+" 월 "+bundle.getInt("DAY")+" 일");
+        fd_button.setText("종료일 :"+bundle.getInt("Year")+" 년 "+bundle.getInt("Month")+" 월 "+bundle.getInt("Day")+" 일");
         if(bundle.getInt("MONTH")<10)
-         s=bundle.getInt("YEAR")+"-"+"0"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
+            s=bundle.getInt("YEAR")+"-"+"0"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
         else{
             s=bundle.getInt("YEAR")+"-"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
         }
@@ -70,33 +68,30 @@ public class Main2Activity extends AppCompatActivity {
         else{
             f=bundle.getInt("Year")+"-"+bundle.getInt("Month")+"-"+bundle.getInt("Day");
         }
-        Cbutton.setVisibility(View.INVISIBLE);
     }
-/*
-
-    private void modify(){
-        Intent intent= getIntent();
-        Bundle bundle = intent.getExtras();
-        Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
-        text2.setVisibility(View.VISIBLE);
-        text2.setText("시작일 :"+bundle.getInt("YEAR")+" 년 "+bundle.getInt("MONTH")+" 월 "+bundle.getInt("DAY")+" 일"+"\n"+
-                "종료일 :"+bundle.getInt("Year")+" 년 "+bundle.getInt("Month")+" 월 "+bundle.getInt("Day")+" 일");
-        Cbutton.setVisibility(View.INVISIBLE);
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
+
+    private void setDate(){
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat CurDateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
+        String strCurDate = CurDateFormat.format(date);
+        sd_button.setText("시작"+"     "+strCurDate);
+        fd_button.setText("종료"+"     "+strCurDate);
     }
-*/
-
-
     private void setup() {
         title = (EditText)findViewById(R.id.editText3);
         btn_up = (Button) findViewById(R.id.buttonp);
         btn_down = (Button) findViewById(R.id.buttonm);
         text = (TextView) findViewById(R.id.count);
         Fbutton = (Button)findViewById(R.id.finish);
-        Cbutton = (Button)findViewById(R.id.button);
+        sd_button = (Button)findViewById(R.id.sd_dutton);
+        fd_button = (Button)findViewById(R.id.fd_button);
         btn_up.setOnClickListener(listener);
         btn_down.setOnClickListener(listener);
-        text2 = (TextView)findViewById(R.id.c_text);
     }
 
     View.OnClickListener listener = new View.OnClickListener() {
