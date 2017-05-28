@@ -12,6 +12,10 @@ import android.view.ViewGroup;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 /**
  * Created by LEE on 2017-05-23.
  */
@@ -25,6 +29,23 @@ public class CalendarFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.calendar3,container,false);
         calendarView = (CalendarView)rootView.findViewById(R.id.calendar2);
+        long now = System.currentTimeMillis();
+
+        final Date date = new Date(now);
+
+        //연,월,일을 따로 저장
+
+        final SimpleDateFormat curYearFormat = new SimpleDateFormat("yyyy", Locale.KOREA);
+
+        final SimpleDateFormat curMonthFormat = new SimpleDateFormat("MM", Locale.KOREA);
+
+        final SimpleDateFormat curDayFormat = new SimpleDateFormat("dd", Locale.KOREA);
+
+        Bundle bundle = m_intent.getExtras();
+        bundle.putInt("Year", Integer.parseInt(String.valueOf(curYearFormat.format(date))));
+        bundle.putInt("Month", Integer.parseInt(String.valueOf(curMonthFormat.format(date))));
+        bundle.putInt("Day",Integer.parseInt(String.valueOf(curDayFormat.format(date))));
+        m_intent.putExtras(bundle);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {

@@ -30,6 +30,17 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent clintent = new Intent(Main2Activity.this, Calendar.class);
+                clintent.setFlags(1);
+                Bundle bundle = new Bundle();
+                clintent.putExtras(bundle);
+                startActivityForResult(clintent,1);
+            }
+        });
+        fd_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent clintent = new Intent(Main2Activity.this, Calendar.class);
+                clintent.setFlags(2);
                 Bundle bundle = new Bundle();
                 clintent.putExtras(bundle);
                 startActivityForResult(clintent,2);
@@ -69,10 +80,8 @@ public class Main2Activity extends AppCompatActivity {
             f=bundle.getInt("Year")+"-"+bundle.getInt("Month")+"-"+bundle.getInt("Day");
         }
     }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+
+
 
     private void setDate(){
         long now = System.currentTimeMillis();
