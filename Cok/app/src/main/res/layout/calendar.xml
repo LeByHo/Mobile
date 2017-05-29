@@ -23,12 +23,6 @@
                />
        </TableRow>
     </TableLayout>
-   <!-- <View
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/view"
-        android:background="#ff00ff00"
-        android:layout_below="@+id/table" />-->
 
     <LinearLayout
         android:layout_below="@id/table"
@@ -38,7 +32,6 @@
         android:orientation="vertical">
 
     </LinearLayout>
-
 
     <Button
         android:id="@+id/button3"

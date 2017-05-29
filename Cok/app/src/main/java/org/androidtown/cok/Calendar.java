@@ -1,20 +1,13 @@
 package org.androidtown.cok;
 
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Message;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
-import android.widget.Toast;
-import android.app.FragmentManager;
-
-import java.lang.reflect.Array;
 
 /**
  * Created by GE62 on 2017-05-10.
@@ -25,7 +18,7 @@ public class Calendar extends AppCompatActivity {
     Button button;
     Button s_btn;
     Button e_btn;
-    android.app.FragmentManager fm;
+    FragmentManager fm;
     Thread th;
     Thread th2;
     CalendarFragment cf;
@@ -43,23 +36,26 @@ public class Calendar extends AppCompatActivity {
         cf2 = new CalendarFragment2(Calendar.this, intent);
         s_btn = (Button) findViewById(R.id.btn);
         e_btn = (Button) findViewById(R.id.btn2);
+        th = new cThread(1);
+        th2 = new cThread(2);
         fm = getFragmentManager();
-        android.app.FragmentTransaction tr = fm.beginTransaction();
+        FragmentTransaction tr = fm.beginTransaction();
         tr.add(R.id.c_frame, cf, "ccc");
         tr.add(R.id.c_frame, cf2, "cccc");
+
         if (intent.getFlags() == 1) {
             e_btn.setBackgroundColor(Color.WHITE);
             s_btn.setBackgroundColor(Color.RED);
             tr.hide(cf2);
+            th.start();
         } else if (intent.getFlags() == 2) {
             e_btn.setBackgroundColor(Color.RED);
             s_btn.setBackgroundColor(Color.WHITE);
             tr.hide(cf);
+            th.start();
         }
         tr.commit();
-        th = new cThread(1);
-        th2 = new cThread(2);
-        th.start();
+
 
         button = (Button) findViewById(R.id.button3);
 
@@ -69,10 +65,11 @@ public class Calendar extends AppCompatActivity {
             public void onClick(View v) {
                 e_btn.setBackgroundColor(Color.WHITE);
                 s_btn.setBackgroundColor(Color.RED);
-                android.app.FragmentTransaction tr = fm.beginTransaction();
+                FragmentTransaction tr = fm.beginTransaction();
                 tr.replace(R.id.c_frame, cf);
                 tr.show(cf);
-                th.start();
+                if(!th.isAlive())
+                    th.start();
                 if (th2.isAlive())
                     th2.interrupt();
                 tr.commit();
@@ -84,10 +81,11 @@ public class Calendar extends AppCompatActivity {
             public void onClick(View v) {
                 e_btn.setBackgroundColor(Color.RED);
                 s_btn.setBackgroundColor(Color.WHITE);
-                android.app.FragmentTransaction tr = fm.beginTransaction();
+                FragmentTransaction tr = fm.beginTransaction();
                 tr.replace(R.id.c_frame, cf2);
                 tr.show(cf2);
-                th2.start();
+                if(!th2.isAlive())
+                    th2.start();
                 if (th.isAlive())
                     th.interrupt();
                 tr.commit();

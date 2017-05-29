@@ -3,12 +3,10 @@ package org.androidtown.cok;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by GE62 on 2017-05-15.
@@ -29,6 +26,7 @@ public class MainFragment extends Fragment {
     ProgressBar bar;
     ProgressHandler handler;
     Button btn;
+    TextView day;
     boolean isRunning =false;
     Context mainContext;
 
@@ -40,16 +38,17 @@ public class MainFragment extends Fragment {
         pName =(TextView)rootView.findViewById(R.id.text);
         mCount =(TextView)rootView.findViewById(R.id.text2);
         mcount = (TextView)rootView.findViewById(R.id.text3);
+        day = (TextView)rootView.findViewById(R.id.day);
         btn =(Button)rootView.findViewById(R.id.btn);
+
         handler = new ProgressHandler();
         Bundle extra = getArguments();
         pName.setText(extra.getString("Project").toString());
-        mCount.setText(extra.getString("mCount").toString());
+        //mCount.setText(extra.getString("mCount").toString());
         mcount.setText(extra.getString("mCount").toString());
+        day.setText(extra.getString("day").toString()+"일");
+        bar.setMax(Integer.parseInt(extra.getString("day")));
         btn.setOnClickListener(new View.OnClickListener() {
-
-
-
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mainContext,Main3Activity.class);
@@ -66,10 +65,6 @@ public class MainFragment extends Fragment {
     public MainFragment(Context _context){
         mainContext = _context;
     }
-
-
-
-
 
     public void onStart() {
         super.onStart();
@@ -93,7 +88,7 @@ public class MainFragment extends Fragment {
 
     public class ProgressHandler extends Handler {
         public void handleMessage(Message msg){
-            bar.incrementProgressBy(5);
+            bar.incrementProgressBy(1);
         }
     }
 }

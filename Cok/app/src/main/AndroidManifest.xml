@@ -3,6 +3,7 @@
     package="org.androidtown.cok">
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,17 +17,16 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
-        <activity android:name=".MainActivity" >
-        <intent-filter>
+        <activity android:name=".MainActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" ></activity>
-        <activity android:name=".Main3Activity" ></activity>
-        <activity android:name=".Calendar" ></activity>
 
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main3Activity" ></activity>
+        <activity android:name=".Calendar"></activity>
     </application>
 
 </manifest>

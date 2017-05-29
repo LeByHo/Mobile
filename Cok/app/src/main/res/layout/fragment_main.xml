@@ -24,7 +24,6 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/tableLayout">
         <TableRow>
-
             <TextView
                 android:layout_span="1"
                 android:text="프 로 젝 트 :"
@@ -58,18 +57,18 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   D - DAY   :"
-                android:textSize="30dp"/>
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
                 android:layout_gravity="center"
-                android:text=" 1010일"
-                android:textSize="30dp"
-                />
+                android:text="   D -  day   :"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="30dp" />
         </TableRow>
         <TableRow>
             <TextView

@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
-import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -59,7 +58,7 @@ public class CalendarFragment2 extends Fragment {
         return rootView;
 
     }
-    public CalendarFragment2(Context _context,Intent intent){
+    public CalendarFragment2(Context _context, Intent intent){
         mainContext = _context;
         m_intent=intent;
     }

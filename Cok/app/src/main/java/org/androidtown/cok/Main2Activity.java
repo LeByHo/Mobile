@@ -64,20 +64,21 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Bundle bundle = data.getExtras();
-        //Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
-        sd_button.setText("시작일 :"+bundle.getInt("YEAR")+" 년 "+bundle.getInt("MONTH")+" 월 "+bundle.getInt("DAY")+" 일");
-        fd_button.setText("종료일 :"+bundle.getInt("Year")+" 년 "+bundle.getInt("Month")+" 월 "+bundle.getInt("Day")+" 일");
-        if(bundle.getInt("MONTH")<10)
-            s=bundle.getInt("YEAR")+"-"+"0"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
-        else{
-            s=bundle.getInt("YEAR")+"-"+bundle.getInt("MONTH")+"-"+bundle.getInt("DAY");
-        }
-        if(bundle.getInt("Month")<10){
-            f=bundle.getInt("Year")+"-"+"0"+bundle.getInt("Month")+"-"+bundle.getInt("Day");
-        }
-        else{
-            f=bundle.getInt("Year")+"-"+bundle.getInt("Month")+"-"+bundle.getInt("Day");
+        if (resultCode == RESULT_OK) {
+            Bundle bundle = data.getExtras();
+            //Toast.makeText(getApplicationContext(),bundle.getInt("YEAR")+"",Toast.LENGTH_SHORT).show();
+            sd_button.setText("시작일 :" + bundle.getInt("YEAR") + " 년 " + bundle.getInt("MONTH") + " 월 " + bundle.getInt("DAY") + " 일");
+            fd_button.setText("종료일 :" + bundle.getInt("Year") + " 년 " + bundle.getInt("Month") + " 월 " + bundle.getInt("Day") + " 일");
+            if (bundle.getInt("MONTH") < 10)
+                s = bundle.getInt("YEAR") + "-" + "0" + bundle.getInt("MONTH") + "-" + bundle.getInt("DAY");
+            else {
+                s = bundle.getInt("YEAR") + "-" + bundle.getInt("MONTH") + "-" + bundle.getInt("DAY");
+            }
+            if (bundle.getInt("Month") < 10) {
+                f = bundle.getInt("Year") + "-" + "0" + bundle.getInt("Month") + "-" + bundle.getInt("Day");
+            } else {
+                f = bundle.getInt("Year") + "-" + bundle.getInt("Month") + "-" + bundle.getInt("Day");
+            }
         }
     }
 
@@ -87,9 +88,12 @@ public class Main2Activity extends AppCompatActivity {
         long now = System.currentTimeMillis();
         Date date = new Date(now);
         SimpleDateFormat CurDateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
+        SimpleDateFormat SettingFormat = new SimpleDateFormat("yyyy-MM-dd");
         String strCurDate = CurDateFormat.format(date);
+        String setCurDate = SettingFormat.format(date);
         sd_button.setText("시작"+"     "+strCurDate);
         fd_button.setText("종료"+"     "+strCurDate);
+        s = f = setCurDate;
     }
     private void setup() {
         title = (EditText)findViewById(R.id.editText3);
