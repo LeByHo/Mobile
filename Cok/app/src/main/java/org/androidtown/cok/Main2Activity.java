@@ -53,6 +53,7 @@ public class Main2Activity extends AppCompatActivity {
                 Bundle bundle = intent.getExtras();
                 bundle.putString("title", title.getText().toString());
                 bundle.putString("number", count + "");
+
                 bundle.putString("start",s);
                 bundle.putString("finish",f);
                 intent.putExtras(bundle);

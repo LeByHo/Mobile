@@ -3,6 +3,7 @@ package org.androidtown.cok;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
@@ -72,8 +73,9 @@ public class MainActivity extends AppCompatActivity {
             String start = data.getStringExtra("start");
             String finish = data.getStringExtra("finish");
 
+
             if(outName.length()>0&&num.length()>0) {
-                makefragment(outName, num, calculate(start,finish)+"");
+                makefragment(outName, num, calculate(start,finish)+"",start,finish);
                 Insertproject(outName, num,start,finish);
             }
         }
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             return 0;
     }
 
-    public void makefragment(String outName, String num, String day) {
+    public void makefragment(String outName, String num, String day,String start, String finish) {
         android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction tr = fm.beginTransaction();
         MainFragment cf = new MainFragment(MainActivity.this);
@@ -109,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("Project", outName);
         bundle.putString("mCount", num);
         bundle.putString("day",day);
+        bundle.putString("start",start);
+        bundle.putString("finish",finish);
         cf.setArguments(bundle);
         tr.add(R.id.frame, cf, "counter");
         tr.commit();
@@ -164,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     private void arrayToobject(JSONArray jsonArray) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject order = jsonArray.getJSONObject(i);
-            makefragment(order.getString("project"), order.getInt("meeting") + "",calculate(order.getString("start"),order.getString("finish"))+"");
+            makefragment(order.getString("project"), order.getInt("meeting") + "",calculate(order.getString("start"),order.getString("finish"))+"",order.getString("start"),order.getString("finish"));
         }
     }
 

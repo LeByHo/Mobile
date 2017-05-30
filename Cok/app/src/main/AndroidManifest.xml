@@ -27,6 +27,7 @@
         <activity android:name=".Main2Activity"></activity>
         <activity android:name=".Main3Activity" ></activity>
         <activity android:name=".Calendar"></activity>
+        <activity android:name=".VoteActivtiy"></activity>
     </application>
 
 </manifest>
