@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
+import java.util.HashMap;
 
 /**
  * Created by LEE on 2017-05-30.
@@ -19,13 +21,20 @@ public class VoteActivtiy extends AppCompatActivity {
     String msg;
     Server server = new Server();
     MainActivity mainActivity = new MainActivity();
-
+    HashMap<String, Integer> data;
+    Intent intent;
+    Bundle bundle3;
+    Bundle bundle2;
+    Thread th;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vote);
-        Intent intent = getIntent();
+        data= new HashMap<>();
+        intent = getIntent();
         Uri uri = intent.getData();
+        th=new cThread();
+        th.start();
         msg = uri.getQueryParameter("project");
         //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
 
@@ -70,6 +79,7 @@ public class VoteActivtiy extends AppCompatActivity {
             }
             else
                 day++;
+            data.put(year + "-" + mon + "-" + day,0);
             makefragment(year + "-" + mon + "-" + day);
         }
     }
@@ -77,13 +87,29 @@ public class VoteActivtiy extends AppCompatActivity {
     public void makefragment(String start) {
         android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction tr = fm.beginTransaction();
-        dateFragment cf = new dateFragment(VoteActivtiy.this);
-        Bundle bundle2 = new Bundle();
+        dateFragment cf = new dateFragment(VoteActivtiy.this, data, intent);
+         bundle2 = new Bundle();
 
         bundle2.putString("start", start);
 
         cf.setArguments(bundle2);
         tr.add(R.id.sframe, cf, "co");
         tr.commit();
+    }
+    class cThread extends Thread {
+
+
+        public void run() {
+            while (true) {
+                try {
+                    Thread.sleep(100);
+                    bundle3= intent.getExtras();
+                   data.put(bundle3.getString("date"),bundle3.getInt("c"));
+                    Toast.makeText(getApplicationContext(),bundle3.getString("date")+"  : "+bundle3.getInt("c"),Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                }
+            }
+        }
+
     }
 }
