@@ -7,7 +7,8 @@
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible"
+        android:visibility="visible"
+        android:background="#00FFFFFF"
         android:layout_alignBottom="@+id/tableLayout"
         android:layout_alignLeft="@+id/tableLayout"
         android:layout_alignStart="@+id/tableLayout"
@@ -56,18 +57,18 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   D - DAY   :"
-                android:textSize="30dp"/>
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
                 android:layout_gravity="center"
-                android:text=" 1010일"
-                android:textSize="30dp"
-                />
+                android:text="   D -  day   :"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="30dp" />
         </TableRow>
         <TableRow>
             <TextView
