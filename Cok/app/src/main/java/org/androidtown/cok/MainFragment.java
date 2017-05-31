@@ -15,8 +15,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
  * Created by GE62 on 2017-05-15.
  */
@@ -44,7 +42,7 @@ public class MainFragment extends Fragment {
         mcount = (TextView)rootView.findViewById(R.id.text3);
         day = (TextView)rootView.findViewById(R.id.day);
         btn =(Button)rootView.findViewById(R.id.btn);
-        percent = (TextView)rootView.findViewById(R.id.percent) ;
+        //percent = (TextView)rootView.findViewById(R.id.percent) ;
 
         handler = new ProgressHandler();
          extra = getArguments();

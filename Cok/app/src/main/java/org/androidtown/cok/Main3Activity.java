@@ -8,7 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.kakao.kakaolink.AppActionBuilder;
+import com.kakao.kakaolink.AppActionInfoBuilder;
+import com.kakao.kakaolink.KakaoLink;
+import com.kakao.kakaolink.KakaoTalkLinkMessageBuilder;
+import com.kakao.util.KakaoParameterException;
 
 /**
  * Created by LEE on 2017-05-17.
@@ -17,9 +22,8 @@ import android.widget.Toast;
 public class Main3Activity extends AppCompatActivity  {
     TextView text1;
     TextView text2;
-    Button btn2;
     Button btn;
-    Bundle bundle;
+    String title;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,29 +32,29 @@ public class Main3Activity extends AppCompatActivity  {
         text1 = (TextView)findViewById(R.id.textView5);
         text2 =(TextView)findViewById(R.id.textView6);
         btn = (Button)findViewById(R.id.btn);
-        btn2 = (Button)findViewById(R.id.btn2);
         Intent data=getIntent();
-        bundle = data.getExtras();
-        String title=bundle.getString("NAME").toString();
+        Bundle bundle = data.getExtras();
+        title=bundle.getString("NAME").toString();
         String number =bundle.getString("NUM").toString();
         text1.setText(title);
         text2.setText(number);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Main3Activity.this, VoteActivtiy.class);
-                Bundle bundle2 = new Bundle();
-                bundle2.putString("START",bundle.getString("Start"));
-                bundle2.putString("FINISH",bundle.getString("Finish"));
-                intent.putExtras(bundle2);
-                startActivity(intent);
-            }
-        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+    }
+    public void shareKakao(View v) {
+        try {
+            final KakaoLink kakaoLink = KakaoLink.getKakaoLink(this);
+            final KakaoTalkLinkMessageBuilder kakaoBuilder = kakaoLink.createKakaoTalkLinkMessageBuilder();
+
+            kakaoBuilder.addText("텍스트");
+            kakaoBuilder.addAppButton("제발",new AppActionBuilder().addActionInfo(AppActionInfoBuilder.createAndroidActionInfoBuilder().setExecuteParam("project"+"="+title).build()).build());
+            kakaoLink.sendMessage(kakaoBuilder, this);
+        } catch (KakaoParameterException e) {
+            e.printStackTrace();
+        }
     }
 }

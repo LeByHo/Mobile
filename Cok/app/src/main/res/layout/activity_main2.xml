@@ -41,7 +41,7 @@
         android:layout_alignStart="@+id/textView"
         android:layout_below="@+id/textView"
         android:layout_marginTop="40dp"
-        android:text="미팅 횟수     :  "
+        android:text="모임 수    :  "
         android:textSize="24sp" />
 
     <TextView
@@ -116,4 +116,5 @@
         android:background="@android:color/transparent"
         android:text="Button"
         android:textSize="24sp" />
+
 </RelativeLayout>

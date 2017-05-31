@@ -41,11 +41,6 @@
                 android:max="100"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
         </TableRow>
         <TableRow>
             <TextView
