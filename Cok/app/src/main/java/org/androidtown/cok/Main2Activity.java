@@ -9,9 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kakao.kakaolink.KakaoLink;
-import com.kakao.kakaolink.KakaoTalkLinkMessageBuilder;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -22,8 +19,6 @@ public class Main2Activity extends AppCompatActivity {
     TextView text;
     EditText title;
     int count = 0;
-    private KakaoLink kakaoLink;
-    private KakaoTalkLinkMessageBuilder kakaoTalkLinkMessageBuilder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

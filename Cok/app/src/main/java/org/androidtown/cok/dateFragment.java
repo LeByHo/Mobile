@@ -11,56 +11,45 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.HashSet;
-
 /**
  * Created by LEE on 2017-05-30.
  */
 
 public class dateFragment extends Fragment {
-    HashMap<String, Integer> info;
     TextView text;
     Context mainContext;
     CheckBox check;
     Intent intent;
-    Bundle bundle2;
+    Bundle bundle;
+    int count;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_date, container, false);
         text=(TextView)rootView.findViewById(R.id.text);
         check=(CheckBox)rootView.findViewById(R.id.check);
-        final Bundle bundle = getArguments();
+        bundle = getArguments();
+
         text.setText(bundle.getString("start"));
+
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(check.isChecked()){
-                    int count = info.get(bundle.getString("start"));
+                    count = VoteActivtiy.data.get(bundle.getString("start"));
                     count++;
-                    bundle2=new Bundle();
-                    bundle2.putInt("c",count);
-                    bundle2.putString("date",bundle.getString("start"));
-                    intent.putExtras(bundle2);
-
+                   VoteActivtiy.data.put(bundle.getString("start"),count);
                 }
                 else if(!check.isChecked()){
-                    int count = info.get(bundle.getString("start"));
+                    count = VoteActivtiy.data.get(bundle.getString("start"));
                     count--;
-                    bundle2=new Bundle();
-                    bundle2.putInt("c",count);
-                    bundle2.putString("date",bundle.getString("start"));
-                    intent.putExtras(bundle2);
+                    VoteActivtiy.data.put(bundle.getString("start"),count);
                 }
-
             }
         });
 
         return  rootView;
     }
-    public dateFragment(Context _context, HashMap<String, Integer> data, Intent intent){
+    public dateFragment(Context _context){
         mainContext = _context;
-        info=data;
-        this.intent=intent;
-    }
 
+    }
 }
