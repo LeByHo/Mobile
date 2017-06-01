@@ -51,6 +51,7 @@ public class MainFragment extends Fragment {
         //mCount.setText(extra.getString("mCount").toString());
         mcount.setText(extra.getString("mCount").toString());
         day.setText(extra.getString("day").toString()+"일");
+
         bar.setMax(Integer.parseInt(extra.getString("day")));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

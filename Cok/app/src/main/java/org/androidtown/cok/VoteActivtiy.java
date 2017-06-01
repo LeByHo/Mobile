@@ -60,7 +60,11 @@ public class VoteActivtiy extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                server.Insertproject(msg1,phoneNum,arr1[1],meeting,start,finish);
+                //mainActivity.makefragment(msg1,arr1[1],meeting,mainActivity.calculate(start,finish)+"");
+                Intent inte = new Intent(VoteActivtiy.this, MainActivity.class);
+                startActivity(inte);
+                finish();
             }
         });
     }
@@ -72,6 +76,9 @@ public class VoteActivtiy extends AppCompatActivity {
 
     private void arrayToobject(JSONArray jsonArray) throws JSONException {
         JSONObject order = jsonArray.getJSONObject(0);
+        meeting = order.getString("meeting");
+        start = order.getString("start");
+        finish = order.getString("finish");
         String[] arr1 = order.getString("start").split("-");
         int tem = mainActivity.calculate(order.getString("start"), order.getString("finish"));
         int year = Integer.parseInt(arr1[0]), mon = Integer.parseInt(arr1[1]), day = Integer.parseInt(arr1[2]);

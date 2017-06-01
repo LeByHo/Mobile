@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     int[] arr = {31,28,31,30,31,30,31,31,30,31,30,31};
     private static final int REQUEST_READ_PHONE_STATE_PERMISSION = 225;
     Server server = new Server();
-
+    public static int votenum=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
