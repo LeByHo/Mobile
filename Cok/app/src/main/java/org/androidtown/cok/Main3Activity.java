@@ -23,7 +23,7 @@ import com.kakao.util.KakaoParameterException;
 public class Main3Activity extends AppCompatActivity  {
     TextView text1;
     TextView text2;
-    Button btn,btn2,btn3;
+    Button btn,btn2,btn3,btn4;
     String title,mas;
 
     String phoneNum;
@@ -38,6 +38,7 @@ public class Main3Activity extends AppCompatActivity  {
         btn = (Button)findViewById(R.id.btn);
         btn2 = (Button)findViewById(R.id.btn2);
         btn3 = (Button)findViewById(R.id.btn3);
+        btn4= (Button)findViewById(R.id.btn4);
         Intent data=getIntent();
         final Bundle bundle = data.getExtras();
         mas =bundle.getString("master").toString();
@@ -71,6 +72,13 @@ public class Main3Activity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3Activity.this,subwayActivity.class);
+                startActivity(intent);
             }
         });
     }
