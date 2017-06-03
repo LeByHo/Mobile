@@ -16,8 +16,7 @@ import android.widget.TextView;
  */
 
 public class dateFragment extends Fragment {
-    TextView text;
-    TextView text2;
+    TextView text,text2;
     Context mainContext;
     RelativeLayout layout;
     int ct = 0;

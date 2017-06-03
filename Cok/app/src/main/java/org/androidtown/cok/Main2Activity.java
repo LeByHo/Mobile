@@ -1,9 +1,12 @@
 package org.androidtown.cok;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,20 +14,23 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 
 public class Main2Activity extends AppCompatActivity {
     String s, f;
-    Button btn_up, btn_down;
+    Button btn_up, btn_down, abtn;
     Button Fbutton, sd_button, fd_button;
-    TextView text;
+    TextView text,t;
     EditText title;
     int count = 0;
+    public static HashMap<String, Integer> Alarm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         setup();
         setDate();
+        Alarm = new HashMap<String, Integer>();
         sd_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +63,17 @@ public class Main2Activity extends AppCompatActivity {
                 intent.putExtras(bundle);
                 setResult(RESULT_OK, intent);
                 finish();
+            }
+        });
+        abtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Alarm.put("1",0);
+                Alarm.put("3",0);
+                Alarm.put("5",0);
+                Alarm.put("7",0);
+                Intent intent= new Intent(Main2Activity.this,AlarmActivty.class);
+                startActivity(intent);
             }
         });
     }
@@ -95,6 +112,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     private void setup() {
+        t=(TextView)findViewById(R.id.tt);
         title = (EditText) findViewById(R.id.editText3);
         btn_up = (Button) findViewById(R.id.buttonp);
         btn_down = (Button) findViewById(R.id.buttonm);
@@ -102,6 +120,7 @@ public class Main2Activity extends AppCompatActivity {
         Fbutton = (Button) findViewById(R.id.finish);
         sd_button = (Button) findViewById(R.id.sd_dutton);
         fd_button = (Button) findViewById(R.id.fd_button);
+        abtn=(Button)findViewById(R.id.abtn);
         btn_up.setOnClickListener(listener);
         btn_down.setOnClickListener(listener);
     }
