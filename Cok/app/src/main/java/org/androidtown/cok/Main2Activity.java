@@ -9,9 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kakao.kakaolink.KakaoLink;
-import com.kakao.kakaolink.KakaoTalkLinkMessageBuilder;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -19,11 +16,10 @@ public class Main2Activity extends AppCompatActivity {
     String s, f;
     Button btn_up, btn_down;
     Button Fbutton, sd_button, fd_button;
-    TextView text;
+    TextView text, t;
     EditText title;
     int count = 0;
-    private KakaoLink kakaoLink;
-    private KakaoTalkLinkMessageBuilder kakaoTalkLinkMessageBuilder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,15 +69,27 @@ public class Main2Activity extends AppCompatActivity {
             Bundle bundle = data.getExtras();
             sd_button.setText("시작일 :" + bundle.getInt("YEAR") + " 년 " + bundle.getInt("MONTH") + " 월 " + bundle.getInt("DAY") + " 일");
             fd_button.setText("종료일 :" + bundle.getInt("Year") + " 년 " + bundle.getInt("Month") + " 월 " + bundle.getInt("Day") + " 일");
-            if (bundle.getInt("MONTH") < 10)
-                s = bundle.getInt("YEAR") + "-" + "0" + bundle.getInt("MONTH") + "-" + bundle.getInt("DAY");
-            else {
-                s = bundle.getInt("YEAR") + "-" + bundle.getInt("MONTH") + "-" + bundle.getInt("DAY");
+            if (bundle.getInt("MONTH") < 10) {
+                if (bundle.getInt("DAY") < 10)
+                    s = bundle.getInt("YEAR") + "-" + "0" + bundle.getInt("MONTH") + "-" + "0" + bundle.getInt("DAY");
+                else
+                    s = bundle.getInt("YEAR") + "-" + "0" + bundle.getInt("MONTH") + "-" + bundle.getInt("DAY");
+            } else {
+                if (bundle.getInt("DAY") < 10)
+                    s = bundle.getInt("YEAR") + "-" + bundle.getInt("MONTH") + "-" + "0" + bundle.getInt("DAY");
+                else
+                    s = bundle.getInt("YEAR") + "-" + bundle.getInt("MONTH") + "-" + bundle.getInt("DAY");
             }
             if (bundle.getInt("Month") < 10) {
-                f = bundle.getInt("Year") + "-" + "0" + bundle.getInt("Month") + "-" + bundle.getInt("Day");
+                if (bundle.getInt("Day") < 10)
+                    f = bundle.getInt("Year") + "-" + "0" + bundle.getInt("Month") + "-" + "0" + bundle.getInt("Day");
+                else
+                    f = bundle.getInt("Year") + "-" + "0" + bundle.getInt("Month") + "-" + bundle.getInt("Day");
             } else {
-                f = bundle.getInt("Year") + "-" + bundle.getInt("Month") + "-" + bundle.getInt("Day");
+                if (bundle.getInt("Day") < 10)
+                    f = bundle.getInt("Year") + "-" + bundle.getInt("Month") + "-" + "0" + bundle.getInt("Day");
+                else
+                    f = bundle.getInt("Year") + "-" + bundle.getInt("Month") + "-" + bundle.getInt("Day");
             }
         }
     }
@@ -100,6 +108,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     private void setup() {
+        t = (TextView) findViewById(R.id.tt);
         title = (EditText) findViewById(R.id.editText3);
         btn_up = (Button) findViewById(R.id.buttonp);
         btn_down = (Button) findViewById(R.id.buttonm);

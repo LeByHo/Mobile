@@ -20,7 +20,7 @@ import java.net.HttpURLConnection;
 public class MainActivity extends AppCompatActivity {
     ImageButton mbutton;
     String phoneNum;
-    int[] arr = {31,28,31,30,31,30,31,31,30,31,30,31};
+    int[] arr = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     private static final int REQUEST_READ_PHONE_STATE_PERMISSION = 225;
     Server server = new Server();
 
@@ -30,22 +30,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startActivity(new Intent(this, SplachActivity.class));
 
-        TelephonyManager telephonyManager = (TelephonyManager) getApplicationContext().getSystemService(getApplicationContext().TELEPHONY_SERVICE);
-        phoneNum = telephonyManager.getLine1Number();
-            new Thread() {
-                @Override
-                public void run() {
-                    System.out.println("!!!");
-                    HttpURLConnection con = server.getConnection("GET","/phonenum/" + phoneNum);
-                    System.out.println("Connection done");
-                    try {
-                        System.out.println("code" + con.getResponseCode());
-                        arrayToobject(server.readJson(con));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+        phoneNum = getPhoneNum();
+        new Thread() {
+            @Override
+            public void run() {
+                System.out.println("!!!");
+                HttpURLConnection con = server.getConnection("GET", "/phonenum/" + phoneNum);
+                System.out.println("Connection done");
+                try {
+                    System.out.println("code" + con.getResponseCode());
+                    arrayToobject(server.readJson(con));
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            }.start();
+            }
+        }.start();
 
 
         mbutton = (ImageButton) findViewById(R.id.m_button);
@@ -60,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public String getPhoneNum() {
+        TelephonyManager telephonyManager = (TelephonyManager) getApplicationContext().getSystemService(getApplicationContext().TELEPHONY_SERVICE);
+        return telephonyManager.getLine1Number();
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -69,43 +73,80 @@ public class MainActivity extends AppCompatActivity {
             String start = data.getStringExtra("start");
             String finish = data.getStringExtra("finish");
 
-            if(outName.length()>0&&num.length()>0) {
-                makefragment(outName, num, calculate(start,finish)+"");
-                server.Insertproject(phoneNum,outName, num,start,finish);
+            if (outName.length() > 0 && num.length() > 0) {
+                InsertMap(start, finish);
+                makefragment(phoneNum, outName, num, calculate(start, finish) + "");
+                server.Insertproject(phoneNum, phoneNum, outName, num, start, finish, 0);
+                String title = phoneNum.replace("+", outName);
+                server.maketable(title, VoteActivtiy.data);
+                server.addAlarm(phoneNum,phoneNum,title, Main3Activity.Alarm);
             }
         }
     }
 
-    public int calculate(String start, String finish){
+    public void InsertMap(String start, String finish) {
+        String[] arr1 = start.split("-");
+        String str;
+        int tem = calculate(start, finish);
+        int year = Integer.parseInt(arr1[0]), mon = Integer.parseInt(arr1[1]), day = Integer.parseInt(arr1[2]);
+        for (int j = 0; j < tem; j++) {
+            if (mon < 10) {
+                if (day < 10)
+                    str = year + "-" + "0" + mon + "-" + "0" + day;
+                else
+                    str = year + "-" + "0" + mon + "-" + day;
+            } else {
+                if (day < 10)
+                    str = year + "-" + mon + "-" + "0" + day;
+                else
+                    str = year + "-" + mon + "-" + day;
+            }
+            VoteActivtiy.data.put(str, 0);
+
+            if (mon == 2 && day == 28) {
+                mon += 1;
+                day = 1;
+            } else if ((mon == 4 || mon == 6 || mon == 9 || mon == 11) && day == 30) {
+                mon += 1;
+                day = 1;
+            } else if ((mon == 1 || mon == 3 || mon == 5 || mon == 7 || mon == 8 || mon == 10 || mon == 12) && day == 31) {
+                if (mon == 12)
+                    mon = 1;
+                else
+                    mon += 1;
+                day = 1;
+            } else
+                day++;
+        }
+    }
+
+    public int calculate(String start, String finish) {
         String[] arr1 = start.split("-");
         String[] arr2 = finish.split("-");
-        int stem=0,ftem=0;
-        for(int i=0; i<Integer.parseInt(arr1[1]);i++){
-            stem+=arr[i];
+        int stem = 0, ftem = 0;
+        for (int i = 0; i < Integer.parseInt(arr1[1]) - 1; i++) {
+            stem += arr[i];
         }
-        stem+=Integer.parseInt(arr1[2]);
-        for(int i=0; i<Integer.parseInt(arr2[1]);i++){
-            ftem+=arr[i];
+        stem += Integer.parseInt(arr1[2]);
+        for (int i = 0; i < Integer.parseInt(arr2[1]) - 1; i++) {
+            ftem += arr[i];
         }
-        ftem+=Integer.parseInt(arr2[2]);
-        if(ftem-stem>=0||ftem-stem+1>=0) {
-            if (Integer.parseInt(arr1[1]) == Integer.parseInt(arr2[1]))
-                return ftem - stem;
-            else
-                return ftem - stem + 1;
-        }
+        ftem += Integer.parseInt(arr2[2]);
+        if (ftem - stem >= 0 || ftem - stem + 1 >= 0)
+            return ftem - stem;
         else
             return 0;
     }
 
-    public void makefragment(String outName, String num, String day) {
+    public void makefragment(String master, String outName, String num, String day) {
         android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction tr = fm.beginTransaction();
         MainFragment cf = new MainFragment(MainActivity.this);
         Bundle bundle = new Bundle();
+        bundle.putString("master", master);
         bundle.putString("Project", outName);
         bundle.putString("mCount", num);
-        bundle.putString("day",day);
+        bundle.putString("day", day);
         cf.setArguments(bundle);
         tr.add(R.id.frame, cf, "counter");
         tr.commit();
@@ -132,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
     private void arrayToobject(JSONArray jsonArray) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject order = jsonArray.getJSONObject(i);
-            makefragment(order.getString("project"), order.getInt("meeting") + "",calculate(order.getString("start"),order.getString("finish"))+"");
+            makefragment(order.getString("master"), order.getString("project"), order.getInt("meeting") + "", calculate(order.getString("start"), order.getString("finish")) + "");
         }
     }
 }
