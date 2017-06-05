@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -20,49 +21,594 @@ import android.widget.Toast;
  * Created by LEE on 2017-06-03.
  */
 
-public class subwayActivity extends Activity  {
-    View mainView = null;
+public class subwayActivity extends Activity {
+    ImageButton 문산, 파주,양평중앙선, 월릉, 금촌, 금릉, 운정, 탄현, 일산, 풍산, 백마, 곡산, 대곡, 능곡, 행신, 화전, 수색, 디지털미디어시티, 가좌, 홍대입구, 서강대;
+    ImageButton 공덕, 신촌,삼각지, 서울역, 용산, 이촌, 서빙고, 한남, 옥수, 응봉, 왕십리, 청량리, 회기, 중랑, 상봉, 망우, 양원, 구리, 도농, 양정, 덕소, 도심, 팔당, 운길산, 양수, 신원, 국수, 아신, 오빈, 양평, 원덕, 용문;
+    ImageButton 대화, 주엽, 정발산, 마두, 백석, 화정, 원당, 삼송, 지축, 구파발, 연신내, 불광, 녹번, 홍제, 무악재, 독립문, 경복궁, 안국, 종로3가, 을지로3가, 충무로, 동대입구;
+    ImageButton 약수, 금호, 압구정, 신사, 잠원, 고속터미널, 교대, 남부터미널, 양재, 매봉, 도곡, 대치, 학여울, 대청, 일원, 수서, 가락시장, 경찰병원, 오금;
+    ImageButton 암사, 천호, 강동구청, 몽촌토성, 잠실, 석촌, 송파, 문정, 장지, 복정, 산성, 남한산성입구, 단대오거리, 신흥, 수진, 모란;
+    ImageButton 전대에버랜드, 둔전, 보평, 고진, 운동장송담대, 김량장, 명지대, 시청용인대, 삼가, 초당, 동백, 어정, 지석, 강남대, 기흥;
+    ImageButton 서울숲, 압구정로데오, 강남구청, 선정릉, 선릉, 합정, 한티, 구룡, 개포동, 대모산입구, 가천대, 태평, 야탑, 이매, 서현, 수내, 정자, 미금, 오리, 죽전, 보정, 구성, 신갈, 상갈, 청명, 영통, 망포, 매탄권선, 수원시청, 매교, 수원;
+    ImageButton 강남, 양재시민의숲, 청계산입구, 판교, 춘천, 남춘천, 김유정, 강촌, 백양리, 굴봉산, 가평, 상천, 청평, 대성리, 마석, 천마산, 평내호평, 금곡, 사릉, 퇴계원, 별내, 갈매, 신내;
+    ImageButton 마천, 거여, 개롱, 방이, 올림픽공원, 둔촌동, 강동, 길동, 굽은다리, 명일, 고덕, 상일동, 광나루, 아차산, 군자, 장한평, 답십리, 마장, 행당, 신금호, 청구, 동대문역사문화공원, 을지로4가, 광화문, 서대문, 충정로, 애오개, 마포;
+    ImageButton 여의나루, 여의도, 신길, 영등포시장, 영등포구청, 오목교, 목동, 신정, 까치산, 화곡, 우장산, 발산, 마곡, 송정, 김포공항, 개화산, 방화;
+    ImageButton 개화, 공항시장, 신방화, 마곡나루, 양천향교, 가양, 증미, 등촌, 염창, 신목동, 선유도, 당산, 국회의사당, 샛강, 노량진9호선, 노들, 흑석, 동작, 구반포, 신반포, 사평, 신논현;
+    ImageButton 송도, 연수, 원인재, 남동인더스파크, 호구포, 인천논현, 소래포구, 월곶, 오이도, 국제업무지구, 센트럴파크, 인천대입구, 지식정보단지, 테크노파크, 캠퍼스타운, 동막, 동춘, 신연수, 선학, 문학경기장, 인천터미널, 예술회관, 인천시청, 간석오거리, 부평삼거리, 동수, 부평, 부평시장, 부평구청, 갈산, 작전, 경인교대입구, 계산, 임학, 박촌, 귤현;
+    ImageButton 인천국제공항, 공항화물청사, 운서, 청라국제도시, 검암, 계양, 인천, 동인천, 도원, 제물포, 도화, 주안, 간석, 동암, 백운, 부개, 송내, 중동, 부천, 소사, 역곡, 오류동, 온수, 개봉, 구일, 구로;
+    ImageButton 독산, 광명, 가산디지털단지, 금천구청, 석수, 관악, 안양, 명학, 금정, 군포, 당정, 의왕, 성균관대, 화서, 세류, 병점, 세마, 오산대, 오산, 진위, 송탄, 서정리, 지제, 평택, 성환, 직산, 두정, 천안, 봉명, 쌍용, 아산, 배방, 온양온천, 신창;
+    ImageButton 신도림, 영등포, 대방, 노량진, 남영, 시청, 종각, 종로5가, 동대문, 동묘앞, 신설동, 제기동, 외대앞, 신이문, 석계, 광운대, 월계, 녹천, 창동, 방학, 도봉, 도봉산, 망월사, 회룡, 의정부, 가능, 녹양, 양주, 덕계, 덕정, 지행, 동두천중앙, 보산, 동두천, 소요산;
+    ImageButton 장암, 수락산, 마들, 노원, 중계, 하계, 공릉, 태릉입구, 먹골, 중화, 면목, 사가정, 용마산, 중곡, 어린이대공원, 건대입구, 뚝섬유원지, 청담, 학동, 논현, 반포, 내방, 총신대입구, 남성, 숭실대입구, 상도, 장승배기, 신대방삼거리, 보라매, 신풍, 대림, 남구로, 철산, 광명사거리, 천왕, 까치울, 부천종합운동장, 춘의, 신중동, 부천시청, 상동, 삼선체육관, 굴포천;
+    ImageButton 정왕, 신길온천, 안산, 초지, 고잔, 중앙, 한대앞, 상록수, 반월, 대야미, 수리산, 산본, 범계, 평촌, 인덕원, 정부과천청사, 과천, 대공원, 경마공원, 선바위, 남태령, 사당, 숙대입구, 회현, 명동, 혜화, 한성대입구, 성신여대입구, 길음, 미아사거리, 미아, 수유, 쌍문, 상계, 당고개;
+    ImageButton 봉화산, 화랑대, 돌곶이, 상월곡, 월곡, 고려대, 안암, 보문, 창신, 신당, 버티고개, 한강진, 이태원, 녹사평, 효창공원앞, 대흥, 광흥창, 상수, 망원, 마포구청, 월드컵경기장, 증산, 새절, 응암, 역촌, 독바위, 구산;
+    ImageButton 신정네거리, 양천구청, 도림천, 구로디지털단지, 신대방, 신림, 봉천, 서울대입구, 낙성대, 방배, 서초, 역삼, 삼성, 종합운동장, 신천, 잠실나루, 강변, 구의, 성수, 용답, 신답, 용두, 뚝섬, 한양대, 상왕십리, 을지로입구, 아현, 이대, 신촌2호선, 문래;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.subway_station);
-        mainView =(RelativeLayout)findViewById(R.id.linearLayout);
+        set1();
+        set2();
+        set3();
+        set4();
+        set5();
+       set6();
+        set7();
+        set8();
+        set9();
+        setc();
+        setb();
+        seta();
+        
+    }
+    public void seta(){
 
-        Button buttonZoomOut = (Button)findViewById(R.id.buttonZoomOut);
-        Button buttonNormal = (Button)findViewById(R.id.buttonNormal);
-        Button buttonZoomIn = (Button)findViewById(R.id.buttonZoomIn);
+        인천국제공항 = (ImageButton)findViewById(R.id.인천국제공항);
+        공항화물청사= (ImageButton)findViewById(R.id.공항화물청사);
+        운서 = (ImageButton)findViewById(R.id.운서);
+        청라국제도시 =(ImageButton)findViewById(R.id.청라국제도시);
+        검암 = (ImageButton)findViewById(R.id.검암);
+        계양 = (ImageButton)findViewById(R.id.계양);
 
-        buttonZoomOut.setOnClickListener(new View.OnClickListener() {
+        귤현 = (ImageButton)findViewById(R.id.귤현);
+        박촌 = (ImageButton)findViewById(R.id.박촌);
+        임학 = (ImageButton)findViewById(R.id.임학);
+        계산 = (ImageButton)findViewById(R.id.계산);
+        경인교대입구 = (ImageButton)findViewById(R.id.경인교대입구);
+        작전= (ImageButton)findViewById(R.id.작전);
+        갈산= (ImageButton)findViewById(R.id.갈산);
+        부평시장 = (ImageButton)findViewById(R.id.부평시장);
+        동수 = (ImageButton)findViewById(R.id.동수);
+        부평삼거리 = (ImageButton)findViewById(R.id.부평삼거리);
+        간석오거리 = (ImageButton)findViewById(R.id.간석오거리);
+        인천시청 = (ImageButton)findViewById(R.id.인천시청);
+        예술회관 = (ImageButton)findViewById(R.id.예술회관);
+        인천터미널 = (ImageButton)findViewById(R.id.인천터미널);
+        문학경기장 = (ImageButton)findViewById(R.id.문학경기장);
+        선학 =(ImageButton)findViewById(R.id.선학);
+        신연수 = (ImageButton)findViewById(R.id.신연수);
+        원인재 = (ImageButton)findViewById(R.id.원인재);
+        동춘 = (ImageButton)findViewById(R.id.동춘);
+        동막 = (ImageButton)findViewById(R.id.동막);
+        캠퍼스타운=  (ImageButton)findViewById(R.id.캠퍼스타운);
+        테크노파크 = (ImageButton)findViewById(R.id.테크노파크);
+        지식정보단지 =(ImageButton)findViewById(R.id.지식정보단지);
+        인천대입구 =(ImageButton)findViewById(R.id.인천대입구);
+        센트럴파크 = (ImageButton)findViewById(R.id.센트럴파크);
+        국제업무지구 = (ImageButton)findViewById(R.id.국제업무지구);
 
-            @Override
-            public void onClick(View v) {
-                zoom(0.5f,0.5f,new PointF(0,0));
-            }
-        });
-        buttonNormal.setOnClickListener(new View.OnClickListener() {
+        송도 = (ImageButton)findViewById(R.id.송도);
+        연수 =(ImageButton)findViewById(R.id.연수);
+        남동인더스파크 = (ImageButton)findViewById(R.id.남동인더스파크);
+        호구포 =(ImageButton)findViewById(R.id.호구포 );
+        인천논현 =(ImageButton)findViewById(R.id.인천논현);
+        소래포구 = (ImageButton)findViewById(R.id.소래포구);
+        월곶 = (ImageButton)findViewById(R.id.월곶);
 
-            @Override
-            public void onClick(View v) {
-                zoom(1f,1f,new PointF(0,0));
-            }
-        });
-        buttonZoomIn.setOnClickListener(new View.OnClickListener() {
+    }
+    public void setb(){
 
-            @Override
-            public void onClick(View v) {
-                zoom(2f,2f,new PointF(0,0));
-            }
-        });
+        서울숲 = (ImageButton)findViewById(R.id.서울숲);
+        압구정로데오 = (ImageButton)findViewById(R.id.압구정로데오);
+        선정릉 = (ImageButton)findViewById(R.id.선정릉);
+        한티 = (ImageButton)findViewById(R.id.한티);
+        구룡 = (ImageButton)findViewById(R.id.구룡);
+        개포동 = (ImageButton)findViewById(R.id.개포동);
+        대모산입구 = (ImageButton)findViewById(R.id.대모산입구);
+        가천대 = (ImageButton)findViewById(R.id.가천대);
+        태평 = (ImageButton)findViewById(R.id.태평);
+        야탑= (ImageButton)findViewById(R.id.야탑);
+        이매 = (ImageButton)findViewById(R.id.이매);
+        서현 = (ImageButton)findViewById(R.id.서현);
+        수내 = (ImageButton)findViewById(R.id.수내);
+        정자 = (ImageButton)findViewById(R.id.정자);
+        미금 = (ImageButton)findViewById(R.id.미금);
+        오리 = (ImageButton)findViewById(R.id.오리);
+        죽전 =(ImageButton)findViewById(R.id.죽전);
+        보정 =(ImageButton)findViewById(R.id.보정);
+        구성= (ImageButton)findViewById(R.id.구성);
+        신갈= (ImageButton)findViewById(R.id.신갈);
+        기흥 = (ImageButton)findViewById(R.id.기흥);
+        상갈 =(ImageButton)findViewById(R.id.상갈);
+        청명 =(ImageButton)findViewById(R.id.청명);
+        영통 = (ImageButton)findViewById(R.id.영통);
+        망포 = (ImageButton)findViewById(R.id.망포);
+        매탄권선= (ImageButton)findViewById(R.id.매탄권선);
+        수원시청= (ImageButton)findViewById(R.id.수원시청);
+        매교 = (ImageButton)findViewById(R.id.매교);
+
+        양재시민의숲 =(ImageButton)findViewById(R.id.양재시민의숲);
+        청계산입구 = (ImageButton)findViewById(R.id.청계산입구);
+        판교 = (ImageButton)findViewById(R.id.판교);
+
+
+        전대에버랜드 = (ImageButton)findViewById(R.id.전대에버랜드);
+        둔전 = (ImageButton)findViewById(R.id.둔전);
+        보평 = (ImageButton)findViewById(R.id.보평);
+        고진 = (ImageButton)findViewById(R.id.고진);
+        운동장송담대 = (ImageButton)findViewById(R.id.운동장송담대);
+        김량장 = (ImageButton)findViewById(R.id.김량장);
+        명지대 = (ImageButton)findViewById(R.id.명지대);
+        시청용인대 = (ImageButton)findViewById(R.id.시청용인대);
+        삼가 = (ImageButton)findViewById(R.id.삼가);
+        초당 = (ImageButton)findViewById(R.id.초당);
+        동백= (ImageButton)findViewById(R.id.동백);
+        어정 =(ImageButton)findViewById(R.id.어정);
+        지석 = (ImageButton)findViewById(R.id.지석);
+        강남대 =(ImageButton)findViewById(R.id.강남대);
+    }
+    public void setc(){
+
+        문산 = (ImageButton)findViewById(R.id.문산);
+        파주 = (ImageButton)findViewById(R.id.파주);
+        월릉 = (ImageButton)findViewById(R.id.월릉);
+        금촌 = (ImageButton)findViewById(R.id.금촌);
+        금릉 = (ImageButton)findViewById(R.id.금릉);
+        운정 = (ImageButton)findViewById(R.id.운정);
+        탄현 = (ImageButton)findViewById(R.id.탄현);
+        일산= (ImageButton)findViewById(R.id.일산);
+        풍산 = (ImageButton)findViewById(R.id.풍산);
+        백마 =(ImageButton)findViewById(R.id.백마);
+        곡산= (ImageButton)findViewById(R.id.곡산);
+        능곡 =(ImageButton)findViewById(R.id.능곡);
+        행신 = (ImageButton)findViewById(R.id.행신);
+        화전 = (ImageButton)findViewById(R.id.화전);
+        수색 = (ImageButton)findViewById(R.id.수색);
+        가좌 = (ImageButton)findViewById(R.id.가좌);
+        서강대 = (ImageButton)findViewById(R.id.서강대);
+        신촌= (ImageButton)findViewById(R.id.신촌);
+        서빙고 = (ImageButton)findViewById(R.id.서빙고);
+        한남= (ImageButton)findViewById(R.id.한남);
+        응봉 = (ImageButton)findViewById(R.id.응봉);
+        중랑 = (ImageButton)findViewById(R.id.중랑);
+        망우 = (ImageButton)findViewById(R.id.망우);
+        양원 = (ImageButton)findViewById(R.id.양원);
+        구리 = (ImageButton)findViewById(R.id.구리);
+        도농 = (ImageButton)findViewById(R.id.도농);
+        양정 =(ImageButton)findViewById(R.id.양정);
+        덕소 =(ImageButton)findViewById(R.id.덕소);
+        도심 = (ImageButton)findViewById(R.id.도심);
+        팔당 = (ImageButton)findViewById(R.id.팔당);
+        운길산= (ImageButton)findViewById(R.id.운길산);
+        양수 =(ImageButton)findViewById(R.id.양수);
+        신원 = (ImageButton)findViewById(R.id.신원);
+        국수 = (ImageButton)findViewById(R.id.국수);
+        아신 = (ImageButton)findViewById(R.id.아신);
+        오빈 = (ImageButton)findViewById(R.id.오빈);
+        양평중앙선 = (ImageButton)findViewById(R.id.양평중앙선);
+        원덕 = (ImageButton)findViewById(R.id.원덕);
+        용문 = (ImageButton)findViewById(R.id.용문);
+
+        춘천 = (ImageButton)findViewById(R.id.춘천);
+        남춘천 = (ImageButton)findViewById(R.id.남춘천);
+        김유정 = (ImageButton)findViewById(R.id.김유정);
+        강촌 = (ImageButton)findViewById(R.id.강촌);
+        백양리 = (ImageButton)findViewById(R.id.백양리);
+        굴봉산 =(ImageButton)findViewById(R.id.굴봉산);
+        가평=(ImageButton)findViewById(R.id.가평);
+        상천 =(ImageButton)findViewById(R.id.상천);
+        청평 =(ImageButton)findViewById(R.id.청평);
+        대성리 = (ImageButton)findViewById(R.id.대성리);
+        마석 = (ImageButton)findViewById(R.id.마석);
+        천마산 =(ImageButton)findViewById(R.id.천마산);
+        평내호평 = (ImageButton)findViewById(R.id.평내호평);
+        금곡= (ImageButton)findViewById(R.id.금곡);
+        사릉 = (ImageButton)findViewById(R.id.사릉);
+        퇴계원 = (ImageButton)findViewById(R.id.퇴계원);
+        별내 = (ImageButton)findViewById(R.id.별내);
+        갈매 =(ImageButton)findViewById(R.id.갈매);
+        신내 =(ImageButton)findViewById(R.id.신내);
     }
 
-    /** zooming is done from here */
-    public void zoom(Float scaleX,Float scaleY,PointF pivot){
-        mainView.setPivotX(pivot.x);
-        mainView.setPivotY(pivot.y);
-        mainView.setScaleX(scaleX);
-        mainView.setScaleY(scaleY);
+    public void set1() {
+        인천 = (ImageButton) findViewById(R.id.인천);
+        동인천 = (ImageButton) findViewById(R.id.동인천);
+        도원 = (ImageButton) findViewById(R.id.도원);
+        제물포 = (ImageButton) findViewById(R.id.제물포);
+        도화 = (ImageButton) findViewById(R.id.도화);
+        주안 = (ImageButton) findViewById(R.id.주안);
+        간석 = (ImageButton) findViewById(R.id.간석);
+        동암 = (ImageButton) findViewById(R.id.동암);
+        백운 = (ImageButton) findViewById(R.id.백운);
+        부평 = (ImageButton) findViewById(R.id.부평);
+        부개 = (ImageButton) findViewById(R.id.부개);
+        송내 = (ImageButton) findViewById(R.id.송내);
+        부천 = (ImageButton) findViewById(R.id.부천);
+        역곡 = (ImageButton) findViewById(R.id.역곡);
+        온수 = (ImageButton) findViewById(R.id.온수);
+        오류동 = (ImageButton) findViewById(R.id.오류동);
+        개봉 = (ImageButton) findViewById(R.id.개봉);
+        구일 = (ImageButton) findViewById(R.id.구일);
+        구로 = (ImageButton) findViewById(R.id.구로);
+        가산디지털단지 = (ImageButton) findViewById(R.id.가산디지털단지);
+        독산 = (ImageButton) findViewById(R.id.독산);
+        광명 = (ImageButton) findViewById(R.id.광명);
+        금천구청 = (ImageButton) findViewById(R.id.금천구청);
+        석수 = (ImageButton) findViewById(R.id.석수);
+        관악 = (ImageButton) findViewById(R.id.관악);
+        안양 = (ImageButton) findViewById(R.id.안양);
+        명학 = (ImageButton) findViewById(R.id.명학);
+        금정 = (ImageButton) findViewById(R.id.금정);
+        군포 = (ImageButton) findViewById(R.id.군포);
+        당정 = (ImageButton) findViewById(R.id.당정);
+        의왕 = (ImageButton) findViewById(R.id.의왕);
+        성균관대 = (ImageButton) findViewById(R.id.성균관대);
+        화서 = (ImageButton) findViewById(R.id.화서);
+        수원 = (ImageButton) findViewById(R.id.수원);
+        세류 = (ImageButton) findViewById(R.id.세류);
+        병점 = (ImageButton) findViewById(R.id.병점);
+        세마 = (ImageButton) findViewById(R.id.세마);
+        오산대 = (ImageButton) findViewById(R.id.오산대);
+        진위 = (ImageButton) findViewById(R.id.진위);
+        송탄 = (ImageButton) findViewById(R.id.서정리);
+        지제 = (ImageButton) findViewById(R.id.지제);
+        평택 = (ImageButton) findViewById(R.id.평택);
+        성환 = (ImageButton) findViewById(R.id.성환);
+        직산 = (ImageButton) findViewById(R.id.직산);
+        두정 = (ImageButton) findViewById(R.id.두정);
+        천안 = (ImageButton) findViewById(R.id.천안);
+        봉명 = (ImageButton) findViewById(R.id.봉명);
+        쌍용 = (ImageButton) findViewById(R.id.쌍용);
+        아산 = (ImageButton) findViewById(R.id.아산);
+        배방 = (ImageButton) findViewById(R.id.배방);
+        온양온천 = (ImageButton) findViewById(R.id.온양온천);
+        신창 = (ImageButton) findViewById(R.id.신창);
+        신도림 = (ImageButton) findViewById(R.id.신도림);
+        영등포 = (ImageButton) findViewById(R.id.영등포);
+        신길 = (ImageButton) findViewById(R.id.신길);
+        대방 = (ImageButton) findViewById(R.id.대방);
+        노량진 = (ImageButton) findViewById(R.id.노량진);
+        용산 = (ImageButton) findViewById(R.id.용산);
+        남영 = (ImageButton) findViewById(R.id.남영);
+        서울역 = (ImageButton) findViewById(R.id.서울역);
+        시청 = (ImageButton) findViewById(R.id.시청);
+        종각 = (ImageButton) findViewById(R.id.종각);
+        종로3가 = (ImageButton) findViewById(R.id.종로3가);
+        종로5가 = (ImageButton) findViewById(R.id.종로5가);
+        동대문 = (ImageButton) findViewById(R.id.동대문);
+        동묘앞 = (ImageButton) findViewById(R.id.동묘앞);
+        신설동 = (ImageButton) findViewById(R.id.신설동);
+        제기동 = (ImageButton) findViewById(R.id.제기동);
+        청량리 = (ImageButton) findViewById(R.id.청량리);
+        회기 = (ImageButton) findViewById(R.id.회기);
+        외대앞 = (ImageButton) findViewById(R.id.외대앞);
+        신이문 = (ImageButton) findViewById(R.id.신이문);
+        석계 = (ImageButton) findViewById(R.id.석계);
+        광운대 = (ImageButton) findViewById(R.id.광운대);
+        월계 = (ImageButton) findViewById(R.id.월계);
+        녹천 = (ImageButton) findViewById(R.id.녹천);
+        창동 = (ImageButton) findViewById(R.id.창동);
+        방학 = (ImageButton) findViewById(R.id.방학);
+        도봉 = (ImageButton) findViewById(R.id.도봉);
+        도봉산 = (ImageButton) findViewById(R.id.도봉산);
+        망월사 = (ImageButton) findViewById(R.id.망월사);
+        회룡 = (ImageButton) findViewById(R.id.회룡);
+        의정부 = (ImageButton) findViewById(R.id.의정부);
+        가능 = (ImageButton) findViewById(R.id.가능);
+        녹양 = (ImageButton) findViewById(R.id.녹양);
+        양주 = (ImageButton) findViewById(R.id.양주);
+        덕계 = (ImageButton) findViewById(R.id.덕계);
+        덕정 = (ImageButton) findViewById(R.id.덕정);
+        지행 = (ImageButton) findViewById(R.id.지행);
+        동두천중앙 = (ImageButton) findViewById(R.id.동두천중앙);
+        보산 = (ImageButton) findViewById(R.id.보산);
+        동두천 = (ImageButton) findViewById(R.id.동두천);
+        소요산 = (ImageButton) findViewById(R.id.소요산);
+    }
+
+    public void set2() {
+        까치산 = (ImageButton) findViewById(R.id.까치산);
+        신정네거리 = (ImageButton) findViewById(R.id.신정네거리);
+        양천구청 = (ImageButton) findViewById(R.id.양천구청);
+        도림천 = (ImageButton) findViewById(R.id.도림천);
+        대림 = (ImageButton) findViewById(R.id.대림);
+        구로디지털단지 = (ImageButton) findViewById(R.id.구로디지털단지);
+        신대방 = (ImageButton) findViewById(R.id.신대방);
+        신림 = (ImageButton) findViewById(R.id.신림);
+        봉천 = (ImageButton) findViewById(R.id.봉천);
+        서울대입구 = (ImageButton) findViewById(R.id.서울대입구);
+        낙성대 = (ImageButton) findViewById(R.id.낙성대);
+        사당 = (ImageButton) findViewById(R.id.사당);
+        방배 = (ImageButton) findViewById(R.id.방배);
+        서초 = (ImageButton) findViewById(R.id.서초);
+        교대 = (ImageButton) findViewById(R.id.교대);
+        강남 = (ImageButton) findViewById(R.id.강남);
+        역삼 = (ImageButton) findViewById(R.id.역삼);
+        선릉 = (ImageButton) findViewById(R.id.선릉);
+        삼성 = (ImageButton) findViewById(R.id.삼성);
+        종합운동장 = (ImageButton) findViewById(R.id.종합운동장);
+        신천 = (ImageButton) findViewById(R.id.신천);
+        잠실 = (ImageButton) findViewById(R.id.잠실);
+        잠실나루 = (ImageButton) findViewById(R.id.잠실나루);
+        강변 = (ImageButton) findViewById(R.id.강변);
+        구의 = (ImageButton) findViewById(R.id.구의);
+        건대입구 = (ImageButton) findViewById(R.id.건대입구);
+        성수 = (ImageButton) findViewById(R.id.성수);
+        용답 = (ImageButton) findViewById(R.id.용답);
+        신답 = (ImageButton) findViewById(R.id.신답);
+        용두 = (ImageButton) findViewById(R.id.용두);
+        신설동 = (ImageButton) findViewById(R.id.신설동);
+        뚝섬 = (ImageButton) findViewById(R.id.뚝섬);
+        한양대 = (ImageButton) findViewById(R.id.한양대);
+        왕십리 = (ImageButton) findViewById(R.id.왕십리);
+        상왕십리 = (ImageButton) findViewById(R.id.상왕십리);
+        신당 = (ImageButton) findViewById(R.id.신당);
+        동대문역사문화공원 = (ImageButton) findViewById(R.id.동대문역사문화공원);
+        을지로4가 = (ImageButton) findViewById(R.id.을지로4가);
+        을지로3가 = (ImageButton) findViewById(R.id.을지로3가);
+        을지로입구 = (ImageButton) findViewById(R.id.을지로입구);
+        충정로 = (ImageButton) findViewById(R.id.충정로);
+        아현 = (ImageButton) findViewById(R.id.아현);
+        이대 = (ImageButton) findViewById(R.id.이대);
+        신촌2호선 = (ImageButton) findViewById(R.id.신촌2호선);
+        홍대입구 = (ImageButton) findViewById(R.id.홍대입구);
+        합정 = (ImageButton) findViewById(R.id.합정);
+        당산 = (ImageButton) findViewById(R.id.당산);
+        영등포구청 = (ImageButton) findViewById(R.id.영등포구청);
+        문래 = (ImageButton) findViewById(R.id.문래);
+
+    }
+    public void set3(){
+        대화=(ImageButton)findViewById(R.id.대화);
+        주엽=(ImageButton)findViewById(R.id.주엽);
+        정발산= (ImageButton)findViewById(R.id.정발산);
+        마두 = (ImageButton)findViewById(R.id.마두);
+        백석 = (ImageButton)findViewById(R.id.백석);
+        대곡 = (ImageButton)findViewById(R.id.대곡);
+        화정 = (ImageButton)findViewById(R.id.화정);
+        원당 = (ImageButton)findViewById(R.id.원당);
+        삼송 = (ImageButton)findViewById(R.id.삼송);
+        지축 = (ImageButton)findViewById(R.id.지축);
+        구파발 = (ImageButton)findViewById(R.id.구파발);
+        연신내 = (ImageButton)findViewById(R.id.연신내);
+        불광 = (ImageButton)findViewById(R.id.불광);
+        녹번 =(ImageButton)findViewById(R.id.녹번);
+        홍제 = (ImageButton)findViewById(R.id.홍제);
+        무악재 = (ImageButton)findViewById(R.id.무악재);
+        독립문 = (ImageButton)findViewById(R.id.독립문);
+        경복궁 = (ImageButton)findViewById(R.id.경복궁);
+        안국 = (ImageButton)findViewById(R.id.안국);
+        충무로 = (ImageButton)findViewById(R.id.충무로);
+        동대입구 = (ImageButton)findViewById(R.id.동대입구);
+        약수 = (ImageButton)findViewById(R.id.약수);
+        금호 = (ImageButton)findViewById(R.id.금호);
+        옥수 = (ImageButton)findViewById(R.id.옥수);
+        압구정 = (ImageButton)findViewById(R.id.압구정);
+        신사 =(ImageButton)findViewById(R.id.신사);
+        잠원 = (ImageButton)findViewById(R.id.잠원);
+        고속터미널 = (ImageButton)findViewById(R.id.고속터미널);
+        남부터미널= (ImageButton)findViewById(R.id.남부터미널);
+        양재 = (ImageButton)findViewById(R.id.양재);
+        매봉 =(ImageButton)findViewById(R.id.매봉);
+        도곡 = (ImageButton)findViewById(R.id.도곡);
+        대치 = (ImageButton)findViewById(R.id.대치);
+        학여울 = (ImageButton)findViewById(R.id.학여울);
+        대청= (ImageButton)findViewById(R.id.대청);
+        일원= (ImageButton)findViewById(R.id.일원);
+        수서 = (ImageButton)findViewById(R.id.수서);
+        가락시장=(ImageButton)findViewById(R.id.가락시장);
+        경찰병원 =(ImageButton)findViewById(R.id.경찰병원);
+        오금 = (ImageButton)findViewById(R.id.오금);
+    }
+    public void set4(){
+        오이도 =(ImageButton)findViewById(R.id.오이도);
+        정왕 =(ImageButton)findViewById(R.id.정왕);
+        신길온천= (ImageButton)findViewById(R.id.신길온천);
+        안산 = (ImageButton)findViewById(R.id.안산);
+        초지 = (ImageButton)findViewById(R.id.초지);
+        고잔 = (ImageButton)findViewById(R.id.고잔);
+        중앙 = (ImageButton)findViewById(R.id.중앙);
+        한대앞 = (ImageButton)findViewById(R.id.한대앞);
+        상록수 = (ImageButton)findViewById(R.id.상록수);
+        반월 = (ImageButton)findViewById(R.id.반월);
+        대야미 =(ImageButton)findViewById(R.id.대야미);
+        수리산 = (ImageButton)findViewById(R.id.수리산);
+        산본 = (ImageButton)findViewById(R.id.산본);
+        범계 =(ImageButton)findViewById(R.id.범계);
+        평촌 = (ImageButton)findViewById(R.id.평촌);
+        인덕원 = (ImageButton)findViewById(R.id.인덕원);
+        정부과천청사 = (ImageButton)findViewById(R.id.정부과천청사);
+        과천 = (ImageButton)findViewById(R.id.과천);
+        대공원=  (ImageButton)findViewById(R.id.대공원);
+        경마공원 = (ImageButton)findViewById(R.id.경마공원);
+        선바위 = (ImageButton)findViewById(R.id.선바위);
+        남태령 = (ImageButton)findViewById(R.id.남태령);
+        총신대입구 = (ImageButton)findViewById(R.id.총신대입구);
+        동작= (ImageButton)findViewById(R.id.동작);
+        이촌 = (ImageButton)findViewById(R.id.이촌);
+        삼각지 =(ImageButton)findViewById(R.id.삼각지);
+        숙대입구 = (ImageButton)findViewById(R.id.숙대입구);
+        회현 = (ImageButton)findViewById(R.id.회현);
+        명동= (ImageButton)findViewById(R.id.명동);
+        혜화 =(ImageButton)findViewById(R.id.혜화);
+        한성대입구 = (ImageButton)findViewById(R.id.한성대입구);
+        성신여대입구 =(ImageButton)findViewById(R.id.성신여대입구);
+        길음 =(ImageButton)findViewById(R.id.길음);
+        미아사거리 =(ImageButton)findViewById(R.id.미아사거리);
+        미아 = (ImageButton)findViewById(R.id.미아);
+        수유 = (ImageButton)findViewById(R.id.수유);
+        쌍문 = (ImageButton)findViewById(R.id.쌍문);
+        노원 = (ImageButton)findViewById(R.id.노원);
+        상계 = (ImageButton)findViewById(R.id.상계);
+        당고개 = (ImageButton)findViewById(R.id.당고개);
+    }
+    public void set5(){
+        마천 = (ImageButton)findViewById(R.id.마천);
+        거여 = (ImageButton)findViewById(R.id.거여);
+        개롱 = (ImageButton)findViewById(R.id.개롱);
+        방이 = (ImageButton)findViewById(R.id.방이);
+        올림픽공원 = (ImageButton)findViewById(R.id.올림픽공원);
+        둔촌동 =(ImageButton)findViewById(R.id.둔촌동);
+        강동 =(ImageButton)findViewById(R.id.강동);
+        길동= (ImageButton)findViewById(R.id.길동);
+        굽은다리 =(ImageButton)findViewById(R.id.굽은다리);
+        명일 = (ImageButton)findViewById(R.id.명일);
+        고덕 = (ImageButton)findViewById(R.id.고덕);
+        상일동 =(ImageButton)findViewById(R.id.상일동);
+        천호 =(ImageButton)findViewById(R.id.천호);
+        광나루 = (ImageButton)findViewById(R.id.광나루);
+        아차산 = (ImageButton)findViewById(R.id.아차산);
+        군자 = (ImageButton)findViewById(R.id.군자);
+        장한평 = (ImageButton)findViewById(R.id.장한평);
+        답십리 =(ImageButton)findViewById(R.id.답십리);
+        마장 = (ImageButton)findViewById(R.id.마장);
+        행당 = (ImageButton)findViewById(R.id.행당);
+        신금호 = (ImageButton)findViewById(R.id.신금호);
+        청구 = (ImageButton)findViewById(R.id.청구);
+        광화문 = (ImageButton)findViewById(R.id.광화문);
+        서대문 = (ImageButton)findViewById(R.id.서대문);
+        애오개 = (ImageButton)findViewById(R.id.애오개);
+        공덕 = (ImageButton)findViewById(R.id.공덕);
+        마포 = (ImageButton)findViewById(R.id.마포);
+        여의나루 = (ImageButton)findViewById(R.id.여의나루);
+        여의도 = (ImageButton)findViewById(R.id.여의도);
+        영등포시장 =(ImageButton)findViewById(R.id.영등포시장);
+        양평= (ImageButton)findViewById(R.id.양평);
+        오목교 = (ImageButton)findViewById(R.id.오목교);
+        목동= (ImageButton)findViewById(R.id.목동);
+        신정= (ImageButton)findViewById(R.id.신정);
+        화곡 = (ImageButton)findViewById(R.id.화곡);
+        우장산= (ImageButton)findViewById(R.id.우장산);
+        발산= (ImageButton)findViewById(R.id.발산);
+        마곡 =(ImageButton)findViewById(R.id.마곡);
+        송정= (ImageButton)findViewById(R.id.송정);
+        김포공항= (ImageButton)findViewById(R.id.김포공항);
+        개화산= (ImageButton)findViewById(R.id.개화산);
+        방화 =(ImageButton)findViewById(R.id.방화);
+    }
+    public void set6(){
+        봉화산 =(ImageButton)findViewById(R.id.봉화산);
+        화랑대 = (ImageButton)findViewById(R.id.화랑대);
+        태릉입구 = (ImageButton)findViewById(R.id.태릉입구);
+        돌곶이 =(ImageButton)findViewById(R.id.돌곶이);
+        상월곡 = (ImageButton)findViewById(R.id.상월곡);
+        월곡 = (ImageButton)findViewById(R.id.월곡);
+        고려대 = (ImageButton)findViewById(R.id.고려대);
+        안암 = (ImageButton)findViewById(R.id.안암);
+        보문 = (ImageButton)findViewById(R.id.보문);
+        창신 =(ImageButton)findViewById(R.id.창신);
+        버티고개 = (ImageButton)findViewById(R.id.버티고개);
+        한강진 =(ImageButton)findViewById(R.id.한강진);
+        이태원 = (ImageButton)findViewById(R.id.이태원);
+        녹사평 = (ImageButton)findViewById(R.id.녹사평);
+        효창공원앞 = (ImageButton)findViewById(R.id.효창공원앞);
+        대흥= (ImageButton)findViewById(R.id.대흥);
+        광흥창 = (ImageButton)findViewById(R.id.광흥창);
+        상수 = (ImageButton)findViewById(R.id.상수);
+        망원 =(ImageButton)findViewById(R.id.망원);
+        마포구청 = (ImageButton)findViewById(R.id.마포구청);
+        월드컵경기장 =(ImageButton)findViewById(R.id.월드컵경기장);
+        디지털미디어시티 = (ImageButton)findViewById(R.id.디지털미디어시티);
+        증산= (ImageButton)findViewById(R.id.증산);
+        새절 = (ImageButton)findViewById(R.id.새절);
+        응암= (ImageButton)findViewById(R.id.응암);
+        역촌= (ImageButton)findViewById(R.id.역촌);
+        독바위 =(ImageButton)findViewById(R.id.독바위);
+        구산= (ImageButton)findViewById(R.id.구산);
+    }
+    public void set7(){
+        부평구청 = (ImageButton)findViewById(R.id.부평구청);
+        굴포천 = (ImageButton)findViewById(R.id.굴포천);
+        삼선체육관 =(ImageButton)findViewById(R.id.삼선체육관);
+        상동 = (ImageButton)findViewById(R.id.상동);
+        부천시청 =(ImageButton)findViewById(R.id.부천시청);
+        신중동 = (ImageButton)findViewById(R.id.신중동);
+        춘의 = (ImageButton)findViewById(R.id.춘의);
+        부천종합운동장= (ImageButton)findViewById(R.id.부천종합운동장);
+        까치울 = (ImageButton)findViewById(R.id.까치울);
+        천왕=(ImageButton)findViewById(R.id.천왕);
+        광명사거리 = (ImageButton)findViewById(R.id.광명사거리);
+        철산= (ImageButton)findViewById(R.id.철산);
+        남구로 = (ImageButton)findViewById(R.id.남구로);
+        신풍 = (ImageButton)findViewById(R.id.신풍);
+        보라매 = (ImageButton)findViewById(R.id.보라매);
+        신대방삼거리 = (ImageButton)findViewById(R.id.신대방삼거리);
+        장승배기 =(ImageButton)findViewById(R.id.장승배기);
+        상도=(ImageButton)findViewById(R.id.상도);
+        숭실대입구 = (ImageButton)findViewById(R.id.숭실대입구);
+        남성 = (ImageButton)findViewById(R.id.남성);
+        내방 = (ImageButton)findViewById(R.id.내방);
+        반포 = (ImageButton)findViewById(R.id.반포);
+        논현 = (ImageButton)findViewById(R.id.논현);
+        학동=  (ImageButton)findViewById(R.id.학동);
+        강남구청= (ImageButton)findViewById(R.id.강남구청);
+        청담 = (ImageButton)findViewById(R.id.청담);
+        뚝섬유원지 =(ImageButton)findViewById(R.id.뚝섬유원지);
+        어린이대공원 = (ImageButton)findViewById(R.id.어린이대공원);
+        중곡= (ImageButton)findViewById(R.id.중곡);
+        용마산 = (ImageButton)findViewById(R.id.용마산);
+        사가정 = (ImageButton)findViewById(R.id.사가정);
+        면목 =(ImageButton)findViewById(R.id.면목);
+        상봉 = (ImageButton)findViewById(R.id.상봉);
+        중화 = (ImageButton)findViewById(R.id.중화);
+        먹골 =(ImageButton)findViewById(R.id.먹골);
+        공릉 = (ImageButton)findViewById(R.id.공릉);
+        하계 = (ImageButton)findViewById(R.id.하계);
+        중계 = (ImageButton)findViewById(R.id.중계);
+        마들 = (ImageButton)findViewById(R.id.마들);
+        수락산 = (ImageButton)findViewById(R.id.수락산);
+        장암 = (ImageButton)findViewById(R.id.장암);
+
+    }
+    public void set8(){
+        암사 = (ImageButton)findViewById(R.id.암사);
+        강동구청= (ImageButton)findViewById(R.id.강동구청);
+        몽촌토성 = (ImageButton)findViewById(R.id.몽촌토성);
+        석촌 = (ImageButton)findViewById(R.id.석촌);
+        송파 = (ImageButton)findViewById(R.id.송파);
+        문정 = (ImageButton)findViewById(R.id.문정);
+        장지 = (ImageButton)findViewById(R.id.장지);
+        복정 = (ImageButton)findViewById(R.id.복정);
+        산성= (ImageButton)findViewById(R.id.산성);
+        남한산성입구 = (ImageButton)findViewById(R.id.남한산성입구);
+        단대오거리 = (ImageButton)findViewById(R.id.단대오거리);
+        신흥 = (ImageButton)findViewById(R.id.신흥);
+        수진 = (ImageButton)findViewById(R.id.수진);
+        모란 = (ImageButton)findViewById(R.id.모란);
+    }
+    public void set9(){
+
+        개화 = (ImageButton)findViewById(R.id.개화);
+        공항시장= (ImageButton)findViewById(R.id.공항시장);
+        신방화 =(ImageButton)findViewById(R.id.신방화);
+        마곡나루 = (ImageButton)findViewById(R.id.마곡나루);
+        양천향교 =(ImageButton)findViewById(R.id.양천향교);
+        가양 =(ImageButton)findViewById(R.id.가양);
+        증미 = (ImageButton)findViewById(R.id.증미);
+        등촌 = (ImageButton)findViewById(R.id.등촌);
+        염창 = (ImageButton)findViewById(R.id.염창);
+        신목동 = (ImageButton)findViewById(R.id.신목동);
+        선유도 = (ImageButton)findViewById(R.id.선유도);
+        국회의사당 = (ImageButton)findViewById(R.id.국회의사당);
+        샛강 = (ImageButton)findViewById(R.id.샛강);
+        노량진9호선 = (ImageButton)findViewById(R.id.노량진9호선);
+        노들 = (ImageButton)findViewById(R.id.노들);
+        흑석 = (ImageButton)findViewById(R.id.흑석);
+        구반포 = (ImageButton)findViewById(R.id.구반포);
+        신반포 = (ImageButton)findViewById(R.id.신반포);
+        사평 = (ImageButton)findViewById(R.id.사평);
+        신논현 = (ImageButton)findViewById(R.id.신논현);
     }
 }
+
 
 
