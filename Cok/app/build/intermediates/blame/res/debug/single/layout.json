@@ -24,12 +24,12 @@
         "source": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map.xml",
         "source": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
@@ -216,16 +216,16 @@
         "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\layout\\design_navigation_item_separator.xml"
-    },
-    {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
         "source": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\src\\main\\res\\layout\\splash.xml"
     },
     {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar.xml",
         "source": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\src\\main\\res\\layout\\calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout\\calendar2.xml",

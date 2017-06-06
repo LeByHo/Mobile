@@ -156,12 +156,12 @@
         "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable\\abc_ratingbar_material.xml"
-    },
-    {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
         "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable\\abc_ratingbar_material.xml"
     },
     {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",

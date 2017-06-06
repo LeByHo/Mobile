@@ -213,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setalarm(JSONArray jsonArray) throws JSONException {
+
         JSONObject order = jsonArray.getJSONObject(0);
         Ala.put("1", order.getInt("alarm1"));
         Ala.put("3", order.getInt("alarm3"));
