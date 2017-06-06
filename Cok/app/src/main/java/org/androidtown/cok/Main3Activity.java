@@ -70,13 +70,6 @@ public class Main3Activity extends AppCompatActivity  {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                HttpURLConnection conn = server.getConnection("GET", "/galarm/" + mas+"/"+phoneNum+"/"+title);
-                try {
-                    System.out.println("code" + conn.getResponseCode());
-                    setalarm(server.readJson(conn));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
             }
         }.start();
 
@@ -97,6 +90,8 @@ public class Main3Activity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 server.addAlarm(mas,phoneNum,title,Alarm);
+                Intent inte = new Intent(Main3Activity.this, MainActivity.class);
+                startActivity(inte);
                 finish();
             }
         });
