@@ -1,9 +1,7 @@
 package org.androidtown.cok;
 
 import android.app.FragmentManager;
-import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.Double2;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
@@ -20,14 +18,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
-    Intent intent;
-    Bundle bundle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        intent= getIntent();
-        bundle=intent.getExtras();
+
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment)fragmentManager.findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -35,14 +30,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        String key = bundle.getString("position");
-        double lt = Double.parseDouble(MainActivity.location.get(key).substring(0,7));
-        double lg = Double.parseDouble(MainActivity.location.get(key).substring(9));
-        LatLng place = new LatLng(lt, lg);
+        LatLng place = new LatLng(37.5758, 126.9735);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(place);
-        markerOptions.title(key);
-
+        markerOptions.title("가락시장");
+        markerOptions.snippet("3호선");
 
         Marker seoul = googleMap.addMarker(markerOptions);
         seoul.showInfoWindow();
