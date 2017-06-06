@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout-v21\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
         "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
@@ -13,18 +9,6 @@
     },
     {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout-v21\\notification_action.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
         "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\layout-v21\\notification_action.xml"
     },
     {

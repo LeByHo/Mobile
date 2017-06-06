@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-small\\kakaostory_icon.png",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\171254349b75d868b64ad80a578a77b8c26c6b78\\output\\res\\drawable-small\\kakaostory_icon.png"
-    },
-    {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-small\\kakaoaccount_icon.png",
         "source": "C:\\Users\\GE62\\.android\\build-cache\\171254349b75d868b64ad80a578a77b8c26c6b78\\output\\res\\drawable-small\\kakaoaccount_icon.png"
     },
@@ -12,15 +8,7 @@
         "source": "C:\\Users\\GE62\\.android\\build-cache\\171254349b75d868b64ad80a578a77b8c26c6b78\\output\\res\\drawable-small\\kakaostory_icon.png"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-small\\kakaotalk_icon.png",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\171254349b75d868b64ad80a578a77b8c26c6b78\\output\\res\\drawable-small\\kakaotalk_icon.png"
-    },
-    {
         "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-small\\kakaotalk_icon.png",
         "source": "C:\\Users\\GE62\\.android\\build-cache\\171254349b75d868b64ad80a578a77b8c26c6b78\\output\\res\\drawable-small\\kakaotalk_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-small\\kakaoaccount_icon.png",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\171254349b75d868b64ad80a578a77b8c26c6b78\\output\\res\\drawable-small\\kakaoaccount_icon.png"
     }
 ]

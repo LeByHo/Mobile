@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\GE62\AndroidStudioProjects\Mobile\Cok\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\GE62\AndroidStudioProjects\Mobile\Cok\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_fa55e2a68b2645ec1d4f6689de3765caffda950a\classes.dex" />
+        <dex dex="C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ef1479a6e53712045341c68e02957ddc1c15ee17\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\GE62\AndroidStudioProjects\Mobile\Cok\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="23709163e8c2b73d6bb6c709663e449e72069921">
-        <dex dex="C:\Users\GE62\AndroidStudioProjects\Mobile\Cok\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_08b9501031cde28025134a9c0c633fbc8e31de6a\classes.dex" />
+        sha1="d15655a2f71e0c608241c3c4bb399bb83fc34318">
+        <dex dex="C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_31a3cf3d92c9bac599f13450eb60ef57350200f2\classes.dex" />
     </item>
 
 </items>

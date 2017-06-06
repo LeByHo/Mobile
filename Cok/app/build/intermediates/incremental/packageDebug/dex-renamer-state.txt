@@ -1,7 +1,7 @@
-#Tue Jun 06 19:08:40 KST 2017
-base.0=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fa55e2a68b2645ec1d4f6689de3765caffda950a
+#Tue Jun 06 20:10:14 KST 2017
+base.0=C\:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ef1479a6e53712045341c68e02957ddc1c15ee17
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_08b9501031cde28025134a9c0c633fbc8e31de6a\\classes.dex
-base.1=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_08b9501031cde28025134a9c0c633fbc8e31de6a
-file.0=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fa55e2a68b2645ec1d4f6689de3765caffda950a\\classes.dex
+file.1=C\:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_31a3cf3d92c9bac599f13450eb60ef57350200f2\\classes.dex
+base.1=C\:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_31a3cf3d92c9bac599f13450eb60ef57350200f2
+file.0=C\:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_ef1479a6e53712045341c68e02957ddc1c15ee17\\classes.dex
