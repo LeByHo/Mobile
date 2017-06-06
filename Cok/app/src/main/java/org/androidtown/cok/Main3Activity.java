@@ -16,6 +16,8 @@ import com.kakao.kakaolink.KakaoLink;
 import com.kakao.kakaolink.KakaoTalkLinkMessageBuilder;
 import com.kakao.util.KakaoParameterException;
 
+import java.util.Iterator;
+
 /**
  * Created by LEE on 2017-05-17.
  */
@@ -78,9 +80,39 @@ public class Main3Activity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main3Activity.this,subwayActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,1);
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+            String k=MainActivity.location.get("가락시장");
+            double a,b;
+            a= Double.parseDouble(k.substring(0,7));
+            b= Double.parseDouble(k.substring(9));
+
+        k=MainActivity.location.get("석촌");
+        double c,d;
+        c= Double.parseDouble(k.substring(0,7));
+        d= Double.parseDouble(k.substring(9));
+
+        a= (a+c)/2;
+        b = (b+d)/2;
+        double min = 9999;
+        String temp = null;
+        Iterator<String> iterator = MainActivity.location.keySet().iterator();
+        while (iterator.hasNext()) {
+            String s =(String) iterator.next();
+            String key = MainActivity.location.get(s);
+            double ln= Double.parseDouble(key.substring(0,7));
+            double lb= Double.parseDouble(key.substring(9));
+            if(min>Math.abs((a-ln))+Math.abs((b-lb))){
+                temp= s;
+                min = Math.abs((a-ln))+Math.abs((b-lb));
+            }
+        }
+        System.out.println(temp+MainActivity.location.get(temp));
     }
     public void shareKakao(View v) {
         try {

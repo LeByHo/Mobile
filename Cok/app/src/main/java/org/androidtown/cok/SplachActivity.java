@@ -4,12 +4,14 @@ package org.androidtown.cok;
         import android.os.Bundle;
         import android.os.Handler;
         import android.os.Message;
+        import android.widget.Button;
 
 /**
  * Created by GE62 on 2017-03-22.
  */
 
 public class SplachActivity extends Activity{
+
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
