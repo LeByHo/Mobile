@@ -31,11 +31,11 @@ import java.util.Map;
  */
 
 public class Main3Activity extends AppCompatActivity {
-    Button btn, btn2, btn3, abtn, btn4;
+    Button btn, btn2, btn3, abtn, btn4,btn5;
     String title, mas, title1, finishd;
     String phoneNum, number;
     Server server = new Server();
-    TextView text1,text2,txt,t1,t2,t3,t4,t5,t6,t7;
+    TextView text1,text2,txt,t1,t2,t3,t4,t5,t6,t7,t8;
     public static Map<String, Integer> Alarm = new HashMap<String, Integer>();
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -116,6 +116,13 @@ public class Main3Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main3Activity.this,MapActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void setup(){
@@ -127,6 +134,7 @@ public class Main3Activity extends AppCompatActivity {
         t5=(TextView)findViewById(R.id.textView7);
         t6=(TextView)findViewById(R.id.textView8);
         t7=(TextView)findViewById(R.id.textView9);
+        t8=(TextView)findViewById(R.id.text10);
         text1 = (TextView)findViewById(R.id.textView2);
         text2 =(TextView)findViewById(R.id.textView4);
         txt = (TextView)findViewById(R.id.txt);
@@ -135,6 +143,7 @@ public class Main3Activity extends AppCompatActivity {
         btn3 = (Button)findViewById(R.id.btn3);
         abtn=(Button)findViewById(R.id.abtn);
         btn4= (Button)findViewById(R.id.btn4);
+        btn5 = (Button)findViewById(R.id.btn5);
         t1.setTypeface(typeFace);
         t2.setTypeface(typeFace);
         t3.setTypeface(typeFace);
@@ -150,6 +159,8 @@ public class Main3Activity extends AppCompatActivity {
         btn3.setTypeface(typeFace);
         btn4.setTypeface(typeFace);
         abtn.setTypeface(typeFace);
+        btn5.setTypeface(typeFace);
+        t8.setTypeface(typeFace);
 
     }
 

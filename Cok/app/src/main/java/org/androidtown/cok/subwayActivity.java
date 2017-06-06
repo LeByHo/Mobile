@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 /**
  * Created by LEE on 2017-06-03.
@@ -20,7 +21,7 @@ public class subwayActivity extends Activity {
     Drawable temp3;
     int count = 0, count2 = 0;
     Button btn;
-
+    String station;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,13 +32,14 @@ public class subwayActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = getIntent();
                 setResult(RESULT_OK, intent);
+                Toast.makeText(getApplicationContext(),station,Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
     }
 
     public void click(View view) {
-        //Toast.makeText(getApplicationContext(),view.getTag()+"",Toast.LENGTH_SHORT).show();
+        station = view.getTag()+"";
         ImageButton imageButton = (ImageButton) view;
         Drawable temp = getApplicationContext().getResources().getDrawable(R.drawable.translation);
         Drawable temp1 = getApplicationContext().getResources().getDrawable(R.drawable.nomal_station);
