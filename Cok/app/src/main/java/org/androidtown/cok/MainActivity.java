@@ -196,14 +196,16 @@ public class MainActivity extends AppCompatActivity {
         Calendar calendar = Calendar.getInstance();
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         Intent receiverIntent = new Intent(MainActivity.this, AlarmReceive.class);
+        receiverIntent.putExtra("name", name);
         PendingIntent pendingIntent;
         int year = Integer.parseInt(spl[0]);
         int mon = Integer.parseInt(spl[1]);
         int date = Integer.parseInt(spl[2]);
         for (String key : Ala.keySet()) {
             if (Ala.get(key) == 1) {
+                receiverIntent.putExtra("day", key);
                 pendingIntent = PendingIntent.getBroadcast(MainActivity.this, cnt, receiverIntent, 0);
-                calendar.set(year,mon-1,date-dis);
+                calendar.set(year, mon - 1, date - dis, 23, 42, 0);
                 alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 dis += 2;
                 cnt++;
@@ -219,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         Ala.put("3", order.getInt("alarm3"));
         Ala.put("5", order.getInt("alarm5"));
         Ala.put("7", order.getInt("alarm7"));
-        //makeAlarm(order.getString("project"), order.getString("finish"));
+        makeAlarm(order.getString("project"), order.getString("finish"));
     }
 
     @Override

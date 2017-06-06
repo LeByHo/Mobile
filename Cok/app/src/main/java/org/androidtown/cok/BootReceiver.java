@@ -12,7 +12,7 @@ import android.support.annotation.RequiresApi;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-public class AlarmReceive extends BroadcastReceiver {
+public class BootReceiver extends BroadcastReceiver {
     private static PowerManager.WakeLock sCpuWakeLock;
     long now = System.currentTimeMillis();
     // 현재시간을 date 변수에 저장한다.
@@ -21,11 +21,7 @@ public class AlarmReceive extends BroadcastReceiver {
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     // nowDate 변수에 값을 저장한다.
     String formatDate = sdfNow.format(date);
-
-    public AlarmReceive() {}
-
-    private NotificationManager mManager;
-
+    String title;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -52,7 +48,7 @@ public class AlarmReceive extends BroadcastReceiver {
         Notification.Builder mBuilder = new Notification.Builder(context);
         mBuilder.setSmallIcon(R.mipmap.ic_launcher);
         mBuilder.setTicker("hi");
-        mBuilder.setContentTitle("D-day");
+        mBuilder.setContentTitle(title);
         mBuilder.setContentText(str+" "+day+"-day");
 
         mBuilder.setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
