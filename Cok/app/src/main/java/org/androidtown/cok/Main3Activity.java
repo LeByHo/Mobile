@@ -37,6 +37,8 @@ public class Main3Activity extends AppCompatActivity {
     Server server = new Server();
     TextView text1,text2,txt,t1,t2,t3,t4,t5,t6,t7,t8;
     public static Map<String, Integer> Alarm = new HashMap<String, Integer>();
+    double min = 9999;
+    String temp = null;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -120,6 +122,9 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main3Activity.this,MapActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("position",temp);
+                intent.putExtras(bundle);
                 startActivity(intent);
             }
         });
@@ -190,26 +195,28 @@ public class Main3Activity extends AppCompatActivity {
         a = Double.parseDouble(k.substring(0, 7));
         b = Double.parseDouble(k.substring(9));
 
-        k = MainActivity.location.get("석촌");
+        k = MainActivity.location.get("기흥");
         double c, d;
         c = Double.parseDouble(k.substring(0, 7));
         d = Double.parseDouble(k.substring(9));
         a = (a + c) / 2;
         b = (b + d) / 2;
 
-        double min = 9999;
-        String temp = null;
+
         Iterator<String> iterator = MainActivity.location.keySet().iterator();
         while (iterator.hasNext()) {
             String s = (String) iterator.next();
             String key = MainActivity.location.get(s);
-            System.out.print("###" + key);
-//            double ln= Double.parseDouble(key.substring(0,7));
-//            double lb= Double.parseDouble(key.substring(9));
-//            if(min>Math.abs((a-ln))+Math.abs((b-lb))){
-//                temp= s;
-//                min = Math.abs((a-ln))+Math.abs((b-lb));
+            System.out.print("###" +s +" "+ key);
+            double ln = Double.parseDouble(key.substring(0, 7));
+            double lb = Double.parseDouble(key.substring(9));
+            System.out.println(lb+"");
+            if (min > Math.abs((a - ln)) + Math.abs((b - lb))) {
+                temp = s;
+                min = Math.abs((a - ln)) + Math.abs((b - lb));
+            }
         }
+
     }
 
 

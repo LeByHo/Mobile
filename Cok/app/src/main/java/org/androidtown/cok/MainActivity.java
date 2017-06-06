@@ -260,7 +260,7 @@ public class MainActivity extends AppCompatActivity {
         location.put("능곡", "37.6187, 126.8208");
         location.put("행신", "37.6121, 126.8340");
         location.put("화정", "37.6346, 126.8326");
-        location.put("수색", "37.5808, 126,8956");
+        location.put("수색", "37.5808, 126.8956");
         location.put("디지털미디어시티" ,"37.5779, 126.9003");
         location.put("가좌", "37.5686, 126.914844");
         location.put("홍대입구", "37.5580, 126.9254");
@@ -372,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
         location.put("서울숲", "37.5436, 127.0446");
         location.put("압구정로데오", "37.5274, 127.0405");
         location.put("강남구청", "37.5171, 127.0412");
-        location.put("선정릉", "37.510326, 127.043795");
+        location.put("선정릉", "37.5103, 127.0437");
         location.put("선릉", "37.5045, 127.0489");
         location.put("합정" ,"37.5495, 126.9140");
         location.put("한티", "37.4961,127.0528");
@@ -417,7 +417,7 @@ public class MainActivity extends AppCompatActivity {
         location.put("마석", "37.6523, 127.3117");
         location.put("천마산", "37.6590, 127.2857");
         location.put("평내호평", "37.6531, 127.2444");
-        location.put("금곡", "37.637448, 127.207942");
+        location.put("금곡", "37.6374, 127.2079");
         location.put("사릉", "37.6511, 127.1768");
         location.put("퇴계원", "37.6483, 127.1438");
         location.put("별내", "37.6422, 127.1272");
