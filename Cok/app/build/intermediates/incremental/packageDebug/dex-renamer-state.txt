@@ -1,7 +1,7 @@
-#Tue Jun 06 19:08:40 KST 2017
-base.0=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fa55e2a68b2645ec1d4f6689de3765caffda950a
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_08b9501031cde28025134a9c0c633fbc8e31de6a\\classes.dex
-base.1=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_08b9501031cde28025134a9c0c633fbc8e31de6a
-file.0=C\:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_fa55e2a68b2645ec1d4f6689de3765caffda950a\\classes.dex
+#Tue Jun 06 19:55:37 KST 2017
+base.0=C\:\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_291dcf92a6ca94e5ae2a7d72744bf0248660c32b
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_409926da0f1bcd99305e1e907d76b11c18722e53\\classes.dex
+base.1=C\:\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_409926da0f1bcd99305e1e907d76b11c18722e53
+file.0=C\:\\Cok\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_291dcf92a6ca94e5ae2a7d72744bf0248660c32b\\classes.dex

@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,7 +20,6 @@ import java.net.HttpURLConnection;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 

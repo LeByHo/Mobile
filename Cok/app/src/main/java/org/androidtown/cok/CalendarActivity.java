@@ -13,7 +13,7 @@ import android.widget.Button;
  * Created by GE62 on 2017-06-06.
  */
 
-public class CalendarActivity extends AppCompatActivity{
+public class CalendarActivity extends AppCompatActivity {
     Button button,s_btn,e_btn;
     FragmentManager fm;
     Thread th,th2;

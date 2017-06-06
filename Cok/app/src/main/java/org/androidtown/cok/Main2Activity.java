@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main2Activity extends AppCompatActivity {
     String s, f;

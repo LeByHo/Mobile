@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="kakaolink-1.1.7">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/779b78929b0b278c11916151f484aa1352b050c2/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/779b78929b0b278c11916151f484aa1352b050c2/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/3220bbd6292d1215272cf10968e1be3a53921b74/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/3220bbd6292d1215272cf10968e1be3a53921b74/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

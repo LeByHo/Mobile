@@ -1,66 +1,34 @@
 [
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\drawable-v21\\avd_show_password.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\design_password_eye.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\avd_hide_password.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\design_password_eye.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\drawable-v21\\avd_hide_password.xml"
     }
 ]

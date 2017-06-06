@@ -1,130 +1,66 @@
 [
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_fab_in.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\anim\\design_fab_out.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_fab_out.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_popup_exit.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_popup_exit.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\anim\\design_fab_in.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_fab_out.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_snackbar_in.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_fade_out.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\2aa006c6fd1ff26583d65eab348b8aff1182739c\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_in_bottom.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_slide_in_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_fab_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_fade_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_snackbar_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\6478181cf06787f3a183ce590a41d051c86b2cf8\\output\\res\\anim\\design_snackbar_out.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\Documents\\GitHub\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
-        "merged": "C:\\Users\\GE62\\AndroidStudioProjects\\Mobile\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\GE62\\.android\\build-cache\\3d667e319e80148e160c76efff753969d8b1359d\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "C:\\Cok\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\이병호\\.android\\build-cache\\d4420ec056dd390ed978a8ac74274eef83165834\\output\\res\\anim\\abc_slide_out_bottom.xml"
     }
 ]

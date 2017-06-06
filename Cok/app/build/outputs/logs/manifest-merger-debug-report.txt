@@ -1,211 +1,211 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:3:5-34
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:5:5-75
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:5:5-75
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:5:22-72
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:5:22-72
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:6:5-72
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:6:5-72
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:6:22-69
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:6:22-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:20:5-66
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:20:5-66
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:7:22-64
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:7:22-64
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:8:5-68
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:8:5-68
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:8:22-65
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:8:22-65
 application
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:10:5-62:19
-MERGED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-location:10.0.1] C:\Users\GE62\.android\build-cache\a0aeca8e8ec1cb460f2d7bacc70504fde7a81650\output\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\GE62\.android\build-cache\8b3fcb1fa443cc8cb9577ed3ce5bc636b8476a60\output\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\GE62\.android\build-cache\660753f79d95401a2a05beb14152c3915ccd1db3\output\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\GE62\.android\build-cache\e77faf796d25b8c9932aa08651113740b2fc8a35\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.1] C:\Users\GE62\.android\build-cache\0b01cff5d682eb940e4b732d816d2b1b13cda757\output\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:25.2.0] C:\Users\GE62\.android\build-cache\6478181cf06787f3a183ce590a41d051c86b2cf8\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\GE62\.android\build-cache\3d667e319e80148e160c76efff753969d8b1359d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\GE62\.android\build-cache\af4f267d1b07dbe7e04f1d92f87940f9ee6cc6b9\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\GE62\.android\build-cache\8a2ca534a38844e6edc77420cf8c4d02d90da5ec\output\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.2.0] C:\Users\GE62\.android\build-cache\a0e927bdd3342311077db99569dd2f8a06bfb6c8\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\GE62\.android\build-cache\34e574a8fad9441cbacda128a9924b496ca068a5\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\GE62\.android\build-cache\43a1ff9e7040c0b18bdce98905927404ec81a67d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\GE62\.android\build-cache\0e9dec3fbe364a11c8c8fdfec7c5b6d5a3e3ecab\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\GE62\.android\build-cache\682085e39c19ae042b6f15898ea9f01c14ca786d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\GE62\.android\build-cache\f5435ca09f17c010d5d3da062f8c5654e6a588ce\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\GE62\.android\build-cache\3ba6993170c699dc31580645d48829163abcedfb\output\AndroidManifest.xml:25:5-20
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:10:5-62:19
+MERGED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:10.0.1] C:\Users\이병호\.android\build-cache\44d8aadd677d1d42fb094c3e5126e542da0c9feb\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\이병호\.android\build-cache\371593c266f16c1b376de2e1ea3986a38bdad7ce\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\이병호\.android\build-cache\50e03c05033b49f96b7729d69e9bb4e46deb8a6e\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\이병호\.android\build-cache\73f475b71b7f200f70c61979a94964ab60a9564a\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.1] C:\Users\이병호\.android\build-cache\6aa38d70e1c55ef0603d63db0de9c11a2dd075d1\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.2.0] C:\Users\이병호\.android\build-cache\2aa006c6fd1ff26583d65eab348b8aff1182739c\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\이병호\.android\build-cache\d4420ec056dd390ed978a8ac74274eef83165834\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\이병호\.android\build-cache\c24028c6134bc1b3a70d84e7b37df98e4983f682\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\이병호\.android\build-cache\4db68fec94642980d6b72dee32eb29e45e6a2139\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.2.0] C:\Users\이병호\.android\build-cache\77d29a2cd5f42006cc0410383624fddb976569ac\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\이병호\.android\build-cache\2db1e21b479c65c1d74ce287ce0e842aaebebe36\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\이병호\.android\build-cache\2c781920a0f20027df50a74ead036152eba2391b\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\이병호\.android\build-cache\a9ff80e7f791c54c8352ecab38252c149794d218\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\이병호\.android\build-cache\8988f324eb9dbea4f1eafc5d80db4c79dc276474\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\이병호\.android\build-cache\1118ec4302816bb6f7897e028462cf16983722b3\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\이병호\.android\build-cache\eb4f81f021aa19f91de4c4fea9cc423919ec7329\output\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:13:9-41
 	android:supportsRtl
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:15:9-35
 	android:roundIcon
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:14:9-54
 	android:allowBackup
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:11:9-35
 	android:icon
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:12:9-43
 	android:theme
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:16:9-40
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:16:9-40
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:17:9-19:70
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:17:9-19:70
 	android:value
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:19:13-68
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:19:13-68
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:18:13-58
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:18:13-58
 activity#org.androidtown.cok.SplachActivity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:20:9-24:69
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:20:9-24:69
 	android:screenOrientation
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:23:13-49
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:23:13-49
 	android:configChanges
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:22:13-63
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:22:13-63
 	android:theme
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:24:13-66
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:24:13-66
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:21:13-43
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:21:13-43
 activity#org.androidtown.cok.MapActivity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:25:9-48
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:25:9-48
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:25:19-46
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:25:19-46
 activity#org.androidtown.cok.MainActivity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:26:9-32:20
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:26:9-32:20
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:26:19-47
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:26:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:27:13-31:29
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:28:17-69
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:28:25-66
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:30:17-77
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:30:27-74
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:30:27-74
 activity#org.androidtown.cok.Main2Activity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:33:9-51
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:33:9-51
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:33:19-48
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:33:19-48
 activity#org.androidtown.cok.Main3Activity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:34:9-51
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:34:9-51
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:34:19-48
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:34:19-48
 activity#org.androidtown.cok.CalendarActivity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:35:9-53
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:35:9-53
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:35:19-51
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:35:19-51
 activity#org.androidtown.cok.subwayActivity
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:36:9-51
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:36:9-51
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:36:19-49
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:36:19-49
 activity#org.androidtown.cok.AlarmActivty
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:37:9-39:59
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:37:9-39:59
 	android:theme
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:39:13-56
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:39:13-56
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:38:13-41
 activity#org.androidtown.cok.VoteActivtiy
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:41:9-52:20
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:41:9-52:20
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:41:19-47
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:41:19-47
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:42:13-51:29
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:42:13-51:29
 action#android.intent.action.VIEW
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:43:25-66
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:45:17-76
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:45:17-76
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:45:27-73
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:45:27-73
 category#android.intent.category.BROWSABLE
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:46:17-78
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:46:17-78
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:46:27-75
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:46:27-75
 data
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:48:17-50:61
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:48:17-50:61
 	android:host
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:49:21-58
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:49:21-58
 	android:scheme
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:50:21-58
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:50:21-58
 meta-data#com.kakao.sdk.AppKey
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:54:9-56:53
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:54:9-56:53
 	android:value
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:56:13-50
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:56:13-50
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:55:13-48
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:55:13-48
 receiver#org.androidtown.cok.AlarmReceive
-ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:58:9-61:48
+ADDED from C:\Cok\app\src\main\AndroidManifest.xml:58:9-61:48
 	android:enabled
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:60:13-35
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:60:13-35
 	android:exported
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:61:13-36
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:61:13-36
 	android:name
-		ADDED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml:59:13-41
+		ADDED from C:\Cok\app\src\main\AndroidManifest.xml:59:13-41
 uses-sdk
-INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:23:5-42
-MERGED from [com.google.android.gms:play-services-location:10.0.1] C:\Users\GE62\.android\build-cache\a0aeca8e8ec1cb460f2d7bacc70504fde7a81650\output\AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\GE62\.android\build-cache\8b3fcb1fa443cc8cb9577ed3ce5bc636b8476a60\output\AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\GE62\.android\build-cache\660753f79d95401a2a05beb14152c3915ccd1db3\output\AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\GE62\.android\build-cache\e77faf796d25b8c9932aa08651113740b2fc8a35\output\AndroidManifest.xml:17:5-42
-MERGED from [com.kakao.sdk:kakaolink:1.1.7] C:\Users\GE62\.android\build-cache\779b78929b0b278c11916151f484aa1352b050c2\output\AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:util:1.1.7] C:\Users\GE62\.android\build-cache\171254349b75d868b64ad80a578a77b8c26c6b78\output\AndroidManifest.xml:11:5-13:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.1] C:\Users\GE62\.android\build-cache\0b01cff5d682eb940e4b732d816d2b1b13cda757\output\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:25.2.0] C:\Users\GE62\.android\build-cache\6478181cf06787f3a183ce590a41d051c86b2cf8\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\GE62\.android\build-cache\3d667e319e80148e160c76efff753969d8b1359d\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\GE62\.android\build-cache\af4f267d1b07dbe7e04f1d92f87940f9ee6cc6b9\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\GE62\.android\build-cache\8a2ca534a38844e6edc77420cf8c4d02d90da5ec\output\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\GE62\.android\build-cache\e1369610cc51db43323eca1368b0966488403173\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.2.0] C:\Users\GE62\.android\build-cache\a0e927bdd3342311077db99569dd2f8a06bfb6c8\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:25.2.0] C:\Users\GE62\.android\build-cache\34e574a8fad9441cbacda128a9924b496ca068a5\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\GE62\.android\build-cache\43a1ff9e7040c0b18bdce98905927404ec81a67d\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\GE62\.android\build-cache\0e9dec3fbe364a11c8c8fdfec7c5b6d5a3e3ecab\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\GE62\.android\build-cache\682085e39c19ae042b6f15898ea9f01c14ca786d\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\GE62\.android\build-cache\f5435ca09f17c010d5d3da062f8c5654e6a588ce\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.2.0] C:\Users\GE62\.android\build-cache\3ba6993170c699dc31580645d48829163abcedfb\output\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Cok\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-location:10.0.1] C:\Users\이병호\.android\build-cache\44d8aadd677d1d42fb094c3e5126e542da0c9feb\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\이병호\.android\build-cache\371593c266f16c1b376de2e1ea3986a38bdad7ce\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] C:\Users\이병호\.android\build-cache\50e03c05033b49f96b7729d69e9bb4e46deb8a6e\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\이병호\.android\build-cache\73f475b71b7f200f70c61979a94964ab60a9564a\output\AndroidManifest.xml:17:5-42
+MERGED from [com.kakao.sdk:kakaolink:1.1.7] C:\Users\이병호\.android\build-cache\3220bbd6292d1215272cf10968e1be3a53921b74\output\AndroidManifest.xml:11:5-13:41
+MERGED from [com.kakao.sdk:util:1.1.7] C:\Users\이병호\.android\build-cache\213303e331b3101b9b5a53baa1d000b78602ef9b\output\AndroidManifest.xml:11:5-13:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.1] C:\Users\이병호\.android\build-cache\6aa38d70e1c55ef0603d63db0de9c11a2dd075d1\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.2.0] C:\Users\이병호\.android\build-cache\2aa006c6fd1ff26583d65eab348b8aff1182739c\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\이병호\.android\build-cache\d4420ec056dd390ed978a8ac74274eef83165834\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\이병호\.android\build-cache\c24028c6134bc1b3a70d84e7b37df98e4983f682\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\이병호\.android\build-cache\4db68fec94642980d6b72dee32eb29e45e6a2139\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\이병호\.android\build-cache\81f72ba4ba01da8c1d14929026b2c0537fb06984\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.2.0] C:\Users\이병호\.android\build-cache\77d29a2cd5f42006cc0410383624fddb976569ac\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\이병호\.android\build-cache\2db1e21b479c65c1d74ce287ce0e842aaebebe36\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\이병호\.android\build-cache\2c781920a0f20027df50a74ead036152eba2391b\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\이병호\.android\build-cache\a9ff80e7f791c54c8352ecab38252c149794d218\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\이병호\.android\build-cache\8988f324eb9dbea4f1eafc5d80db4c79dc276474\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\이병호\.android\build-cache\1118ec4302816bb6f7897e028462cf16983722b3\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\이병호\.android\build-cache\eb4f81f021aa19f91de4c4fea9cc423919ec7329\output\AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.2.0] C:\Users\GE62\.android\build-cache\6478181cf06787f3a183ce590a41d051c86b2cf8\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.2.0] C:\Users\이병호\.android\build-cache\2aa006c6fd1ff26583d65eab348b8aff1182739c\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\GE62\Documents\GitHub\Mobile\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Cok\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:19:5-78
+ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:19:22-76
+		ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:19:22-76
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:21:5-77
+ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:21:19-51
+		ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:21:19-51
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\GE62\.android\build-cache\f024d08e5a71638a9a532711e6219fed8d944c7a\output\AndroidManifest.xml:21:52-75
+		ADDED from [com.google.android.gms:play-services-maps:10.0.1] C:\Users\이병호\.android\build-cache\0848a38e1ed543452e179d4dba1038940c460941\output\AndroidManifest.xml:21:52-75
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\GE62\.android\build-cache\8b3fcb1fa443cc8cb9577ed3ce5bc636b8476a60\output\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\이병호\.android\build-cache\371593c266f16c1b376de2e1ea3986a38bdad7ce\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\GE62\.android\build-cache\8b3fcb1fa443cc8cb9577ed3ce5bc636b8476a60\output\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\이병호\.android\build-cache\371593c266f16c1b376de2e1ea3986a38bdad7ce\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\GE62\.android\build-cache\8b3fcb1fa443cc8cb9577ed3ce5bc636b8476a60\output\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\이병호\.android\build-cache\371593c266f16c1b376de2e1ea3986a38bdad7ce\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\GE62\.android\build-cache\8b3fcb1fa443cc8cb9577ed3ce5bc636b8476a60\output\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] C:\Users\이병호\.android\build-cache\371593c266f16c1b376de2e1ea3986a38bdad7ce\output\AndroidManifest.xml:19:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\GE62\.android\build-cache\e77faf796d25b8c9932aa08651113740b2fc8a35\output\AndroidManifest.xml:20:9-121
+ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\이병호\.android\build-cache\73f475b71b7f200f70c61979a94964ab60a9564a\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\GE62\.android\build-cache\e77faf796d25b8c9932aa08651113740b2fc8a35\output\AndroidManifest.xml:20:66-119
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\이병호\.android\build-cache\73f475b71b7f200f70c61979a94964ab60a9564a\output\AndroidManifest.xml:20:66-119
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\GE62\.android\build-cache\e77faf796d25b8c9932aa08651113740b2fc8a35\output\AndroidManifest.xml:20:20-65
+		ADDED from [com.google.android.gms:play-services-basement:10.0.1] C:\Users\이병호\.android\build-cache\73f475b71b7f200f70c61979a94964ab60a9564a\output\AndroidManifest.xml:20:20-65
