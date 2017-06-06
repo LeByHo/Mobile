@@ -32,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
     Server server = new Server();
     public static Map<String, Integer> Ala = new HashMap<String, Integer>();
     String setCurDate;
-    int cnt=0, ftem;
-    public static HashMap<String, String> location = new HashMap<String,String>();
+    int cnt = 0;
+    public static HashMap<String, String> location = new HashMap<String, String>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,12 +71,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void setDate() {
         long now = System.currentTimeMillis();
         Date date = new Date(now);
         SimpleDateFormat SettingFormat = new SimpleDateFormat("yyyy-MM-dd");
         setCurDate = SettingFormat.format(date);
     }
+
     public String getPhoneNum() {
         TelephonyManager telephonyManager = (TelephonyManager) getApplicationContext().getSystemService(getApplicationContext().TELEPHONY_SERVICE);
         return telephonyManager.getLine1Number();
@@ -90,10 +93,11 @@ public class MainActivity extends AppCompatActivity {
             String num = data.getStringExtra("number");
             String start = data.getStringExtra("start");
             String finish = data.getStringExtra("finish");
-            int cur = calculate(start,setCurDate);
+
+            int cur = calculate(start, setCurDate);
             if (outName.length() > 0 && num.length() > 0 && people.length() > 0) {
                 InsertMap(start, finish);
-                makefragment(phoneNum, outName, people, num, calculate(start, finish) + "",cur);
+                makefragment(phoneNum, outName, people, num, calculate(start, finish) + "", cur, finish);
                 server.Insertproject(phoneNum, phoneNum, outName, num, start, finish, 0, Integer.parseInt(people));
                 String title = phoneNum.replace("+", outName);
                 server.maketable(title, VoteActivtiy.data);
@@ -155,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             return -1;
     }
 
-    public void makefragment(final String master, final String outName, String peo, String num, String day, int cur) {
+    public void makefragment(final String master, final String outName, String peo, String num, String day, int cur, String finish) {
         new Thread() {
             @Override
             public void run() {
@@ -170,51 +174,49 @@ public class MainActivity extends AppCompatActivity {
         }.start();
         android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction tr = fm.beginTransaction();
-        MainFragment cf = new MainFragment(MainActivity.this,Ala);
+        MainFragment cf = new MainFragment(MainActivity.this, Ala);
         Bundle bundle = new Bundle();
         bundle.putString("master", master);
         bundle.putString("Project", outName);
         bundle.putString("mCount", peo);
         bundle.putString("mcount", num);
         bundle.putString("day", day);
-        bundle.putInt("cur",cur);
+        bundle.putInt("cur", cur);
+        bundle.putString("finish", finish);
         cf.setArguments(bundle);
         tr.add(R.id.frame, cf, "counter");
         tr.commit();
     }
-    public void makeAlarm(String name){
 
-        int year, mon, date, hour=9,min = 48+cnt;
-        int dis=1;
+    public void makeAlarm(String name, String finish) {
+        int dis = 1;
+        String[] spl = finish.split("-");
         Calendar calendar = Calendar.getInstance();
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         Intent receiverIntent = new Intent(MainActivity.this, AlarmReceive.class);
         PendingIntent pendingIntent;
-        for(String key : Ala.keySet()){
-            if(Ala.get(key)==1) {
-                System.out.println(name+" "+"key : " + key + ", value : " +  Ala.get(key));
-                ftem -= dis;
-                dis+=2;
-                year = ftem /365;
-                mon = (ftem%365)/12;
-                date = (ftem%365)%12;
-                System.out.println("@@@@ "+year+" "+mon+" "+date+" "+cnt);
-                pendingIntent= PendingIntent.getBroadcast(MainActivity.this, cnt, receiverIntent, 0);
-                calendar.set(year, mon - 1, date, hour, min);
-                alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent );
+        int year = Integer.parseInt(spl[0]);
+        int mon = Integer.parseInt(spl[1]);
+        int date = Integer.parseInt(spl[2]);
+        for (String key : Ala.keySet()) {
+            if (Ala.get(key) == 1) {
+                pendingIntent = PendingIntent.getBroadcast(MainActivity.this, cnt, receiverIntent, 0);
+                calendar.set(year,mon-1,date-dis,13,0,0);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                dis += 2;
                 cnt++;
             }
         }
     }
+
+
     private void setalarm(JSONArray jsonArray) throws JSONException {
         JSONObject order = jsonArray.getJSONObject(0);
-        System.out.print("###"+order);
         Ala.put("1", order.getInt("alarm1"));
         Ala.put("3", order.getInt("alarm3"));
         Ala.put("5", order.getInt("alarm5"));
         Ala.put("7", order.getInt("alarm7"));
-        System.out.println("@!@ "+ Ala);
-        makeAlarm(order.getString("project"));
+        makeAlarm(order.getString("project"), order.getString("finish"));
     }
 
     @Override
@@ -238,7 +240,7 @@ public class MainActivity extends AppCompatActivity {
     private void arrayToobject(JSONArray jsonArray) throws JSONException {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject order = jsonArray.getJSONObject(i);
-            makefragment(order.getString("master"), order.getString("project"), order.getInt("people") + "", order.getInt("meeting") + "", calculate(order.getString("start"), order.getString("finish")) + "",calculate(order.getString("start"),setCurDate));
+            makefragment(order.getString("master"), order.getString("project"), order.getInt("people") + "", order.getInt("meeting") + "", calculate(order.getString("start"), order.getString("finish")) + "", calculate(order.getString("start"), setCurDate), order.getString("finish"));
         }
     }
     public void locationSetup(){

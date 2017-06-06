@@ -22,7 +22,7 @@ import java.util.Map;
  */
 
 public class MainFragment extends Fragment {
-    TextView pName,mCount,mcount;
+    TextView pName, mCount, mcount;
     ProgressBar bar;
     ProgressHandler handler;
     Button btn;
@@ -30,7 +30,7 @@ public class MainFragment extends Fragment {
     boolean isRunning = false;
     Context mainContext;
     Bundle extra;
-    String mas;
+    String mas, fdate;
     Map<String, Integer> Alam;
     int cur;
 
@@ -53,8 +53,11 @@ public class MainFragment extends Fragment {
         mcount.setText(extra.getString("mcount").toString());
         String tm = extra.getString("day").toString();
         cur = extra.getInt("cur");
-        day.setText((Integer.parseInt(tm)-cur) + "일");
+        day.setText((Integer.parseInt(tm) - cur) + "일");
+        fdate = extra.getString("finish");
+
         bar.setMax(Integer.parseInt(extra.getString("day")));
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +67,7 @@ public class MainFragment extends Fragment {
                 bundle.putString("NAME", pName.getText().toString());
                 bundle.putString("NUM", mcount.getText().toString());
                 bundle.putString("Start", extra.getString("start"));
-                bundle.putString("Finsih", extra.getString("finish"));
+                bundle.putString("Finish", fdate);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

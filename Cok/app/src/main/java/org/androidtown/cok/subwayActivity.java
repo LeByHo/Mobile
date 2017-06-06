@@ -71,7 +71,6 @@ public class subwayActivity extends Activity {
         k = imageButton;
         count++;
     }
-
 }
 
 
