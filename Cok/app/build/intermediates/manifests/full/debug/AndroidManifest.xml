@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -36,6 +36,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity android:name="org.androidtown.cok.MapActivity" />
         <activity android:name="org.androidtown.cok.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +51,6 @@
         <activity
             android:name="org.androidtown.cok.AlarmActivty"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="org.androidtown.cok.MapActivity" />
         <activity android:name="org.androidtown.cok.VoteActivtiy" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
