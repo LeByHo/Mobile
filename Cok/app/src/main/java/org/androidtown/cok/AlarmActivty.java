@@ -3,22 +3,13 @@ package org.androidtown.cok;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.nio.charset.Charset;
-import java.util.HashMap;
 
 /**
  * Created by LEE on 2017-06-03.
@@ -50,28 +41,28 @@ public class AlarmActivty extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        if(Main2Activity.Alarm.get("7")==0)
-                            Main2Activity.Alarm.put("7",1);
+                        if(Main3Activity.Alarm.get("7")==0)
+                            Main3Activity.Alarm.put("7",1);
                         else
-                            Main2Activity.Alarm.put("7",0);
+                            Main3Activity.Alarm.put("7",0);
                         break;
                     case 1:
-                        if(Main2Activity.Alarm.get("5")==0)
-                            Main2Activity.Alarm.put("5",1);
+                        if(Main3Activity.Alarm.get("5")==0)
+                            Main3Activity.Alarm.put("5",1);
                         else
-                            Main2Activity.Alarm.put("5",0);
+                            Main3Activity.Alarm.put("5",0);
                         break;
                     case 2:
-                        if(Main2Activity.Alarm.get("3")==0)
-                            Main2Activity.Alarm.put("3",1);
+                        if(Main3Activity.Alarm.get("3")==0)
+                            Main3Activity.Alarm.put("3",1);
                         else
-                            Main2Activity.Alarm.put("3",0);
+                            Main3Activity.Alarm.put("3",0);
                         break;
                     case 3:
-                        if(Main2Activity.Alarm.get("1")==0)
-                            Main2Activity.Alarm.put("1",1);
+                        if(Main3Activity.Alarm.get("1")==0)
+                            Main3Activity.Alarm.put("1",1);
                         else
-                            Main2Activity.Alarm.put("1",0);
+                            Main3Activity.Alarm.put("1",0);
                         break;
                 }
             }
@@ -83,6 +74,7 @@ public class AlarmActivty extends Activity {
             }
         });
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //바깥레이어 클릭시 안닫히게

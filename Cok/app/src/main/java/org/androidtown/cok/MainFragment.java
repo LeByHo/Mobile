@@ -1,20 +1,12 @@
 package org.androidtown.cok;
 
 import android.app.Fragment;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
-import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,17 +14,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.Map;
 
 /**
  * Created by GE62 on 2017-05-15.
  */
 
 public class MainFragment extends Fragment {
-    TextView pName;
-    TextView mCount;
-    TextView mcount;
-    TextView percent;
+    TextView pName,mCount,mcount;
     ProgressBar bar;
     ProgressHandler handler;
     Button btn;
@@ -41,6 +31,8 @@ public class MainFragment extends Fragment {
     Context mainContext;
     Bundle extra;
     String mas;
+    Map<String, Integer> Alam;
+    int cur;
 
     @Nullable
     @Override
@@ -52,16 +44,16 @@ public class MainFragment extends Fragment {
         mcount = (TextView) rootView.findViewById(R.id.text3);
         day = (TextView) rootView.findViewById(R.id.day);
         btn = (Button) rootView.findViewById(R.id.btn);
-        //percent = (TextView)rootView.findViewById(R.id.percent) ;
 
         handler = new ProgressHandler();
         extra = getArguments();
         mas = extra.getString("master").toString();
         pName.setText(extra.getString("Project").toString());
-        //mCount.setText(extra.getString("mCount").toString());
-        mcount.setText(extra.getString("mCount").toString());
-        day.setText(extra.getString("day").toString() + "일");
-
+        mCount.setText(extra.getString("mCount").toString());
+        mcount.setText(extra.getString("mcount").toString());
+        String tm = extra.getString("day").toString();
+        cur = extra.getInt("cur");
+        day.setText((Integer.parseInt(tm)-cur) + "일");
         bar.setMax(Integer.parseInt(extra.getString("day")));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,26 +69,26 @@ public class MainFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         return rootView;
     }
 
-    public MainFragment(Context _context) {
+    public MainFragment(Context _context, Map map) {
         mainContext = _context;
+        Alam = map;
     }
 
     public void onStart() {
         super.onStart();
-        bar.setProgress(0);
+        bar.setProgress(cur);
         Thread thread1 = new Thread(new Runnable() {
             public void run() {
                 try {
                     int i;
-                    for (i = 0; i < Integer.parseInt(extra.getString("day")) && isRunning; i++) {
-                        Thread.sleep(5000);
+                    for (i = 0; i < Integer.parseInt(extra.getString("day")) && isRunning; i--) {
+                        Thread.sleep(6000);
                         Message msg = handler.obtainMessage();
                         handler.sendMessage(msg);
-                        handler.notifi(i);
-
                     }
                 } catch (Exception ex) {
                     Log.e("MainActivity", "Exception in processing message.", ex);
@@ -106,44 +98,12 @@ public class MainFragment extends Fragment {
         isRunning = true;
         thread1.start();
     }
-    public void NotificationSomethings() {
-
-
-        Resources res = getResources();
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(mainContext);
-
-        builder.setContentTitle("상태바 드래그시 보이는 타이틀")
-                .setContentText("상태바 드래그시 보이는 서브타이틀")
-                .setTicker("상태바 한줄 메시지")
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
-                .setAutoCancel(true)
-                .setWhen(System.currentTimeMillis())
-                .setDefaults(Notification.DEFAULT_ALL);
-
-
-
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            builder.setCategory(Notification.CATEGORY_MESSAGE)
-                    .setPriority(Notification.PRIORITY_HIGH)
-                    .setVisibility(Notification.VISIBILITY_PUBLIC);
-        }
-
-        NotificationManager nm = (NotificationManager) mainContext.getSystemService(mainContext.NOTIFICATION_SERVICE);
-        nm.notify(1234, builder.build());
-    }
-
-
 
 
     public class ProgressHandler extends Handler {
         public void handleMessage(Message msg) {
             bar.incrementProgressBy(1);
         }
-        public void notifi(int i){
-            if(i==0)
-                NotificationSomethings();
-        }
+
     }
 }
